@@ -39,6 +39,7 @@ int main(int argc,char *argv[])
 {
     //local variables
     Sprite *bg;
+    GFC_Vector2D image_scale;
     //initializtion    
     parse_arguments(argc,argv);
     init_logger("gf3d.log",0);
@@ -55,7 +56,7 @@ int main(int argc,char *argv[])
     //game init
     srand(SDL_GetTicks());
     slog_sync();
-    bg = gf2d_sprite_load_image("images/bg_flat.png");
+    bg = gf2d_sprite_load_image("images/snake.png");
     gf2d_mouse_load("actors/mouse.actor");
     // main game loop    
     while(!_done)
@@ -67,7 +68,10 @@ int main(int argc,char *argv[])
         gf3d_vgraphics_render_start();
                 //2D draws
                 gf2d_sprite_draw_image(bg,gfc_vector2d(0,0));
-                gf2d_font_draw_line_tag("ALT+F4 to exit",FT_H1,GFC_COLOR_WHITE, gfc_vector2d(10,10));
+                image_scale = gfc_vector2d(1.7,1.7);
+                //gf2d_sprite_draw_full(bg, GFC_Vector2D(0,0), GFC_Vector2D(1,1), GFC_Vector2D(1280/2, 720/2), 0, GFC_Vector2D(0,0), GFC_Color(1,1,1,1), GFC_Vector4D(0,0,0,0), NULL, 0 );
+                gf2d_sprite_draw(bg, gfc_vector2d(0,0), &image_scale, NULL, NULL,NULL, NULL,NULL,NULL);
+                gf2d_font_draw_line_tag("Absolute Cinema",FT_H2,GFC_COLOR_WHITE, gfc_vector2d(bg->frameWidth / 2 - 115,10));
                 gf2d_mouse_draw();
         gf3d_vgraphics_render_end();
         if (gfc_input_command_down("exit"))_done = 1; // exit condition

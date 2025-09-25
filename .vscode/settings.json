@@ -1,0 +1,10 @@
+{
+    "C_Cpp.errorSquiggles": "enabled",
+    "C_Cpp.default.compilerPath": "/usr/bin/gcc",
+    "files.associations": {
+        "simple_json.h": "c",
+        "sdl.h": "c"
+    },
+    "C_Cpp.intelliSenseEngine": "default",
+    "editor.wordBasedSuggestions": "allDocuments"
+}

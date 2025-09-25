@@ -1,0 +1,1 @@
+pushd src; make; popd
