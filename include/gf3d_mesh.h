@@ -1,6 +1,8 @@
 #ifndef __GF3D_MESH_H__
 #define __GF3D_MESH_H__
 
+#define MESH_ATTRIBUTE_COUNT 3
+
 #include <stdalign.h>
 #include <vulkan/vulkan.h>
 
@@ -11,6 +13,7 @@
 #include "gfc_primitives.h"
 
 #include "gf3d_pipeline.h"
+
 
 
 //forward declaration:
@@ -24,6 +27,8 @@ typedef struct
     GFC_Matrix4     proj;
     GFC_Vector4D    color;
     GFC_Vector4D    camera;
+    GFC_Vector4D    lightPos;
+    GFC_Vector4D    lightColor;
 }MeshUBO;
 
 typedef struct
@@ -82,12 +87,12 @@ Mesh *gf3d_mesh_load(const char *filename);
 /**
  * @brief draw a mesh given the parameters
  */
-void gf3d_mesh_draw(Mesh *mesh,GFC_Matrix4 modelMat,GFC_Color mod,Texture *texture);
-
+void gf3d_mesh_draw(Mesh *mesh,GFC_Matrix4 modelMat,GFC_Color mod,Texture *texture,GFC_Vector3D lightPos,GFC_Color lightColor);
 /**
  * @brief allocate a zero initialized mesh primitive
  * @return NULL on error or the primitive
  */
+
 MeshPrimitive *gf3d_mesh_primitive_new();
 
 
@@ -116,6 +121,8 @@ void gf3d_mesh_free(Mesh *mesh);
  */
 void gf3d_mesh_create_vertex_buffer_from_vertices(MeshPrimitive *primitive);
 
+void gf3d_mesh_setup_face_buffers(MeshPrimitive *prim);
+
 /**
  * @brief get the pipeline that is used to render basic 3d meshes
  * @return NULL on error or the pipeline in question
@@ -127,9 +134,7 @@ Pipeline *gf3d_mesh_get_pipeline();
  * @param modelMat the model Matrix
  * @param colorMod the color for the UBO
  */
-MeshUBO gf3d_mesh_get_ubo(
-    GFC_Matrix4 modelMat,
-    GFC_Color colorMod);
+MeshUBO gf3d_mesh_get_ubo(GFC_Matrix4 modelMat, GFC_Color colorMod, GFC_Vector3D lightPos, GFC_Color lightColor);
 
 
 #endif

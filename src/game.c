@@ -41,8 +41,12 @@ int main(int argc,char *argv[])
 {
     //local variables
     Mesh *mesh;
-    GFC_Vector3D cam = {0,10,0};
-    GFC_Matrix4 id;
+    Texture *texture;
+    float theta = 0;
+    GFC_Vector3D cam = {0,20,0};
+    GFC_Matrix4 id,dinoM;
+    GFC_Color lightColor = GFC_COLOR_WHITE;
+    GFC_Vector3D lightPos = { 0, 0 ,5};
     //initializtion    
     parse_arguments(argc,argv);
     init_logger("gf3d.log",0);
@@ -55,29 +59,43 @@ int main(int argc,char *argv[])
     gf3d_vgraphics_init("config/setup.cfg");
     gf2d_font_init("config/font.cfg");
     gf2d_actor_init(1000);
+
+    gf2d_sprite_manager_init(1024);
+
+    gf3d_texture_init(500);
     
     //game init
     srand(SDL_GetTicks());
     slog_sync();
+    gf2d_mouse_load("actors/mouse.actor");
     // main game loop    
     mesh = gf3d_mesh_load("models/dino/dino.obj");
+    texture = gf3d_texture_load("models/dino/dino.png");
+    
     gfc_matrix4_identity(id);
     
     gf3d_camera_look_at(gfc_vector3d(0,0,0),&cam);
     while(!_done)
     {
+
+        if (!texture)
+        {
+            slog("texture is null");
+        }
         gfc_input_update();
         gf2d_mouse_update();
         gf2d_font_update();
         //world updates
-        
+        theta += 0.1;
+        gfc_matrix4_rotate_z(dinoM,id,theta);
         //camera updaes
         gf3d_camera_update_view();
         gf3d_vgraphics_render_start();
                 //3D draws
-                gf3d_mesh_draw(mesh,id,GFC_COLOR_WHITE,NULL);
+                gf3d_mesh_draw(mesh,dinoM,GFC_COLOR_WHITE,texture, lightPos, lightColor);
                 //2D draws
-
+                gf2d_font_draw_line_tag("ALT+F4 to exit",FT_H1,GFC_COLOR_WHITE, gfc_vector2d(10,10));
+                gf2d_mouse_draw();
         gf3d_vgraphics_render_end();
         if (gfc_input_command_down("exit"))_done = 1; // exit condition
         game_frame_delay();

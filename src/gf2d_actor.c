@@ -22,10 +22,10 @@ void gf2d_actor_clear_all();
 void gf2d_actor_close()
 {
     gf2d_actor_clear_all();
-    if (actor_manager.actorList != NULL)
+    /*if (actor_manager.actorList != NULL)
     {
         free(actor_manager.actorList);
-    }
+    }*/
     actor_manager.actorList = NULL;
     actor_manager.maxActors = 0;
 }
