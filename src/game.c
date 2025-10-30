@@ -22,6 +22,8 @@
 #include "gf3d_camera.h"
 #include "gf3d_mesh.h"
 
+#include "entity.h"
+#include "agumon.h"
 extern int __DEBUG;
 
 static int _done = 0;
@@ -40,14 +42,16 @@ void exitGame()
 int main(int argc,char *argv[])
 {
     //local variables
-    Mesh *mesh;
+    /*Mesh *mesh;
     Texture *texture;
     float theta = 0;
-    GFC_Vector3D cam = {0,20,0};
+    
     GFC_Matrix4 id,dinoM;
     GFC_Color lightColor = GFC_COLOR_WHITE;
-    GFC_Vector3D lightPos = { 0, 0 ,5};
+    GFC_Vector3D lightPos = { 0, 0 ,5};*/
     //initializtion    
+
+    GFC_Vector3D cam = {0,20,0};
     parse_arguments(argc,argv);
     init_logger("gf3d.log",0);
     slog("gf3d begin");
@@ -60,6 +64,9 @@ int main(int argc,char *argv[])
     gf2d_font_init("config/font.cfg");
     gf2d_actor_init(1000);
 
+    // Simon's shit
+    entity_system_init(64);
+
     gf2d_sprite_manager_init(1024);
 
     gf3d_texture_init(500);
@@ -69,33 +76,49 @@ int main(int argc,char *argv[])
     slog_sync();
     gf2d_mouse_load("actors/mouse.actor");
     // main game loop    
-    mesh = gf3d_mesh_load("models/dino/dino.obj");
-    texture = gf3d_texture_load("models/dino/dino.png");
+    //mesh = gf3d_mesh_load("models/dino/dino.obj");
+    //texture = gf3d_texture_load("models/dino/dino.png");
     
-    gfc_matrix4_identity(id);
+    //gfc_matrix4_identity(id);
+    
+    /*Agumon* agumon_list = (Agumon *)gfc_allocate_array(sizeof(Agumon), 10);
+
+    for (int i = 0; i < 10; i++)
+    {
+        agumon_list[i] = *spawn_agumon();
+    }
+    */
+
+    Agumon* ag1 = spawn_agumon();
+    Agumon* ag2 = spawn_agumon();
+
+    
     
     gf3d_camera_look_at(gfc_vector3d(0,0,0),&cam);
     while(!_done)
     {
 
-        if (!texture)
-        {
-            slog("texture is null");
-        }
         gfc_input_update();
         gf2d_mouse_update();
         gf2d_font_update();
+
+        entity_system_think_all();
+        entity_system_update_all();
+
+
+        
         //world updates
-        theta += 0.1;
-        gfc_matrix4_rotate_z(dinoM,id,theta);
+        //theta += 0.1;
+        //gfc_matrix4_rotate_z(dinoM,id,theta);
         //camera updaes
         gf3d_camera_update_view();
         gf3d_vgraphics_render_start();
-                //3D draws
-                gf3d_mesh_draw(mesh,dinoM,GFC_COLOR_WHITE,texture, lightPos, lightColor);
-                //2D draws
-                gf2d_font_draw_line_tag("ALT+F4 to exit",FT_H1,GFC_COLOR_WHITE, gfc_vector2d(10,10));
-                gf2d_mouse_draw();
+        //3D draws
+        //gf3d_mesh_draw(mesh,dinoM,GFC_COLOR_WHITE,texture, lightPos, lightColor);
+        entity_system_draw_all();
+        //2D draws
+        gf2d_font_draw_line_tag("ALT+F4 to exit",FT_H1,GFC_COLOR_WHITE, gfc_vector2d(10,10));
+        gf2d_mouse_draw();
         gf3d_vgraphics_render_end();
         if (gfc_input_command_down("exit"))_done = 1; // exit condition
         game_frame_delay();

@@ -6,8 +6,15 @@
         "sdl.h": "c",
         "gf3d_pipeline.h": "c",
         "gf3d_obj_load.h": "c",
-        "gf3d_buffers.h": "c"
+        "gf3d_buffers.h": "c",
+        "cstdlib": "c",
+        "gf3d_texture.h": "c",
+        "entity.h": "c",
+        "simple_logger.h": "c",
+        "gf3d_mesh.h": "c",
+        "gfc_primitives.h": "c"
     },
     "C_Cpp.intelliSenseEngine": "default",
-    "editor.wordBasedSuggestions": "allDocuments"
+    "editor.wordBasedSuggestions": "allDocuments",
+    "editor.fontFamily": "\"Monocraft Nerd Font\""
 }

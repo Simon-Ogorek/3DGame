@@ -14,6 +14,7 @@ typedef struct
     Uint32          chain_length;     /**<length of swap chain*/
     VkDevice        device;           /**<logical vulkan device*/
     Pipeline       *pipe;             /**<the pipeline associated with sprite rendering*/
+    Pipeline       *sky_pipe;
     VkBuffer        faceBuffer;       /**<memory handle for the face buffer (always two faces)*/
     VkDeviceMemory  faceBufferMemory; /**<memory habdle for tge face memory*/
     VkVertexInputAttributeDescription   attributeDescriptions[MESH_ATTRIBUTE_COUNT];
@@ -52,6 +53,18 @@ void gf3d_mesh_init(Uint32 mesh_max)
     bufferSize = sizeof(SpriteFace) * 2;
     */
 
+    mesh_manager.sky_pipe = gf3d_pipeline_create_from_config(
+        gf3d_vgraphics_get_default_logical_device(),
+        "config/sky_pipeline.cfg",
+        gf3d_vgraphics_get_view_extent(),
+        mesh_max,
+        gf3d_mesh_get_bind_description(),
+        gf3d_mesh_get_attribute_descriptions(NULL),
+        count,
+        sizeof(SkyUBO),
+        VK_INDEX_TYPE_UINT16
+    );
+
     mesh_manager.pipe = gf3d_pipeline_create_from_config(
         gf3d_vgraphics_get_default_logical_device(),
         "config/model_pipeline.cfg",
@@ -86,8 +99,8 @@ Mesh *gf3d_mesh_get_by_filename(const char *filename)
             return &mesh_manager.mesh_list[i];
         }
     }
-    slog("value of %i filename is %s", 1, mesh_manager.mesh_list[i]);
-    slog("Couldnt find mesh by filename of %s", filename);
+    //slog("value of %i filename is %s", 1, mesh_manager.mesh_list[i]);
+    //slog("Couldnt find mesh by filename of %s", filename);
     return NULL;
 }
 
@@ -220,11 +233,28 @@ void gf3d_mesh_queue_render(Mesh *mesh,Pipeline *pipe,void *uboData,Texture *tex
     }
 }
 
+void gf3d_sky_draw(Mesh *mesh,GFC_Matrix4 modelMat,GFC_Color mod,Texture *texture)
+{
+    SkyUBO ubo = {0};
+    
+    if (!mesh)return;
+    gfc_matrix4_copy(ubo.model,modelMat);
+    gf3d_vgraphics_get_view(&ubo.view);
+    gf3d_vgraphics_get_projection_matrix(&ubo.proj);
+
+    ubo.color = gfc_color_to_vector4f(mod);
+    gf3d_mesh_queue_render(mesh,mesh_manager.sky_pipe,&ubo,texture);
+}
+
 void gf3d_mesh_draw(Mesh *mesh,GFC_Matrix4 modelMat,GFC_Color mod,Texture *texture,GFC_Vector3D lightPos,GFC_Color lightColor)
 {
     MeshUBO ubo = {0};
     
-    if (!mesh)return;
+    if (!mesh)
+    {
+        slog("no mesh to draw");
+        return;
+    }
     gfc_matrix4_copy(ubo.model,modelMat);
     gf3d_vgraphics_get_view(&ubo.view);
     gf3d_vgraphics_get_projection_matrix(&ubo.proj);
@@ -280,7 +310,7 @@ VkVertexInputAttributeDescription * gf3d_mesh_get_attribute_descriptions(Uint32 
 
 void gf3d_mesh_free(Mesh *mesh)
 {
-
+    
 }
 
 

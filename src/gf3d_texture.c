@@ -46,10 +46,10 @@ void gf3d_texture_close()
 {
     if (__DEBUG)slog("cleaning up textures");
     gf3d_texture_delete_all();
-    /*if (gf3d_texture.texture_list != NULL)
+    if (gf3d_texture.texture_list != NULL)
     {
         free(gf3d_texture.texture_list);
-    }*/
+    }
 }
 
 Texture *gf3d_texture_new()

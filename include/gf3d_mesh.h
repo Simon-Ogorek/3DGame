@@ -33,6 +33,14 @@ typedef struct
 
 typedef struct
 {
+    GFC_Matrix4     model;
+    GFC_Matrix4     view;
+    GFC_Matrix4     proj;
+    GFC_Vector4D    color;
+}SkyUBO;
+
+typedef struct
+{
     GFC_Vector3D vertex;
     GFC_Vector3D normal;
     GFC_Vector2D texel;
@@ -92,6 +100,8 @@ void gf3d_mesh_draw(Mesh *mesh,GFC_Matrix4 modelMat,GFC_Color mod,Texture *textu
  * @brief allocate a zero initialized mesh primitive
  * @return NULL on error or the primitive
  */
+
+void gf3d_sky_draw(Mesh *mesh,GFC_Matrix4 modelMat,GFC_Color mod,Texture *texture);
 
 MeshPrimitive *gf3d_mesh_primitive_new();
 
