@@ -1,4 +1,4 @@
-#include "gf3d_mesh.h"
+/*#include "gf3d_mesh.h"
 
 Mesh *gf3d_mesh_new()
 {
@@ -48,4 +48,4 @@ Mesh *gf3d_mesh_load(const char *filename)
     mesh = gf3d_mesh_new();
     if (!mesh)
 
-}
+}*/
