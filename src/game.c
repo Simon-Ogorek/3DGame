@@ -24,6 +24,10 @@
 
 #include "entity.h"
 #include "agumon.h"
+#include "world.h"
+#include "player.h"
+#include "player_camera.h"
+#include "monster.h"
 extern int __DEBUG;
 
 static int _done = 0;
@@ -50,31 +54,32 @@ int main(int argc,char *argv[])
     GFC_Color lightColor = GFC_COLOR_WHITE;
     GFC_Vector3D lightPos = { 0, 0 ,5};*/
     //initializtion    
-
-    GFC_Vector3D cam = {0,20,0};
+    SDL_SetRelativeMouseMode(SDL_TRUE);
+    GFC_Vector3D cam = {0,50,500};
     parse_arguments(argc,argv);
     init_logger("gf3d.log",0);
     slog("gf3d begin");
     //gfc init
     gfc_input_init("config/input.cfg");
     gfc_config_def_init();
-    gfc_action_init(1024);
+    gfc_action_init(512);
     //gf3d init
     gf3d_vgraphics_init("config/setup.cfg");
     gf2d_font_init("config/font.cfg");
-    gf2d_actor_init(1000);
+    gf2d_actor_init(128);
 
     // Simon's shit
     entity_system_init(64);
 
-    gf2d_sprite_manager_init(1024);
+    gf2d_sprite_manager_init(128);
 
-    gf3d_texture_init(500);
+    gf3d_texture_init(128);
     
     //game init
     srand(SDL_GetTicks());
     slog_sync();
-    gf2d_mouse_load("actors/mouse.actor");
+    
+    //gf2d_mouse_load("actors/mouse.actor");
     // main game loop    
     //mesh = gf3d_mesh_load("models/dino/dino.obj");
     //texture = gf3d_texture_load("models/dino/dino.png");
@@ -89,24 +94,31 @@ int main(int argc,char *argv[])
     }
     */
 
-    Agumon* ag1 = spawn_agumon();
-    Agumon* ag2 = spawn_agumon();
+    //Agumon* ag1 = spawn_agumon();
+    World* world = spawn_world();
+
+    Player* player = spawn_player(world);
+    
+    P_Camera* p_cam = spawn_camera(player);
+
+    monsters_init(player);
+
+    Monster* agumon_monster = spawn_monster();
 
     
     
-    gf3d_camera_look_at(gfc_vector3d(0,0,0),&cam);
+    //gf3d_camera_look_at(gfc_vector3d(0,0,0),&cam);
     while(!_done)
     {
 
         gfc_input_update();
         gf2d_mouse_update();
         gf2d_font_update();
+        //resetMouseToCenter();
 
         entity_system_think_all();
         entity_system_update_all();
 
-
-        
         //world updates
         //theta += 0.1;
         //gfc_matrix4_rotate_z(dinoM,id,theta);

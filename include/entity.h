@@ -10,6 +10,7 @@
 
 typedef struct Entity_S Entity;
 
+
 struct Entity_S
 {
     Uint8        _inuse;
@@ -28,6 +29,7 @@ struct Entity_S
     void      (*think)(struct Entity_S *self);
     void      (*update)(struct Entity_S *self);
     Uint8     drawShadow;
+    void * calling_parent;
 };
 
 Entity *entity_new();

@@ -91,7 +91,7 @@ int gf2d_mouse_button_state(int button);
  */
 GFC_Vector2D gf2d_mouse_get_position();
 
-
+GFC_Vector2D gf2d_mouse_get_position_from_center();
 /**
  * @brief get the angle to the mouse with respect to the provided point
  * @param point the relative point to check from

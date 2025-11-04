@@ -163,7 +163,7 @@ Mesh *gf3d_mesh_load(const char *filename)
     {
         slog("Obj data not found for %s", filename);
     }
-
+    
     
 
     /*
@@ -190,7 +190,6 @@ Mesh *gf3d_mesh_load(const char *filename)
 
     MeshPrimitive *prim = gf3d_mesh_primitive_new();
     prim->objData = obj;
-
     gf3d_mesh_create_vertex_buffer_from_vertices(prim);
     gf3d_mesh_setup_face_buffers(prim);
 

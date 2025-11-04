@@ -143,6 +143,17 @@ GFC_Vector2D gf2d_mouse_get_position()
     return _mouse.mouse[0].position;
 }
 
+GFC_Vector2D gf2d_mouse_get_position_from_center()
+{
+    GFC_Vector2D currPos = _mouse.mouse[0].position;
+    GFC_Vector2D extent = gf3d_vgraphics_get_view_extent_as_vector2d();
+    currPos.x -= extent.x / 2;
+    currPos.y -= extent.y / 2;
+    resetMouseToCenter();
+    return currPos;
+}
+
+
 GFC_Vector2D gf2d_mouse_get_movement()
 {
     GFC_Vector2D dif;

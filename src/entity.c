@@ -9,12 +9,6 @@ typedef struct
 
 static EntitySystem entity_system = {0};
 
-    Mesh *mesh;
-    Texture *texture;
-    GFC_Matrix4 id,dinoM;
-    GFC_Color lightColor;
-    GFC_Vector3D lightPos = { 0, 0 ,5};
-
 void entity_free(Entity *ent)
 {
     if (!ent) return;
@@ -47,13 +41,6 @@ void entity_system_init(Uint32 max_ents)
     GFC_Matrix4 default_matrix;
     GFC_Vector3D default_lightPos = gfc_vector3d(0,0,0);
     GFC_Color default_lightColor = GFC_COLOR_WHITE;
-    
-
-    mesh = gf3d_mesh_load("models/dino/dino.obj");
-    texture = gf3d_texture_load("models/dino/dino.png");
-    lightColor = GFC_COLOR_WHITE;
-    gfc_matrix4_identity(id);
-    
     
     if (!max_ents)
     {

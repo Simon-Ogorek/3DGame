@@ -1,7 +1,7 @@
 /**
  * @purpose vulkan graphics setup and abstraction
 */
-
+#define FOV 60
 #include <SDL.h>
 #include <SDL_vulkan.h>
 #include <vulkan/vulkan.h>
@@ -151,7 +151,7 @@ void gf3d_vgraphics_init(const char *config)
     
     gfc_matrix4_perspective(
         gf3d_vgraphics.ubo.proj,
-        45 * GFC_DEGTORAD,
+        FOV* GFC_DEGTORAD,
         resolution.x/resolution.y,
         0.1f,
         100000
@@ -701,6 +701,12 @@ GFC_Vector3D vgraphics_3d_position_to_screen_depth(GFC_Vector3D position)
     out.y = (0.5 *(transformed.y / transformed.w) + 0.5)*res.y;
     out.z = transformed.z;
     return out;
+}
+
+void resetMouseToCenter()
+{
+    GFC_Vector2D extent = gf3d_vgraphics_get_view_extent_as_vector2d();
+    SDL_WarpMouseInWindow(gf3d_vgraphics.main_window, extent.x/2, extent.y/2);
 }
 
 

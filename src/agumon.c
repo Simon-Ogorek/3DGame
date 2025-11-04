@@ -32,7 +32,7 @@ Agumon *spawn_agumon()
     ag->ent->lightPos = gfc_vector3d(0,0,5);
     ag->ent->color = GFC_COLOR_WHITE;
     ag->ent->lightColor = GFC_COLOR_WHITE;
-
+    ag->ent->position.z = 5;
     slog("I'm spawning a agumon");
     
     GFC_Matrix4 id;
@@ -64,7 +64,7 @@ void agumon_think(Entity *ent)
 
     */
 
-    ent->position.z += gfc_random() - 0.5;
+    //ent->position.z += gfc_random() - 0.5;
 }
 
 void agumon_update(Entity *ent)
@@ -77,6 +77,8 @@ void agumon_update(Entity *ent)
         ent->rotation,
         ent->scale
     );
+
+    slog("%f,%f,%f",ent->position.x,ent->position.y,ent->position.z);
 }
 
 void agumon_draw(Entity *ent)
