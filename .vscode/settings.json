@@ -16,7 +16,9 @@
         "gfc_pak.h": "c",
         "player_camera.h": "c",
         "gf2d_mouse.h": "c",
-        "gfc_vector.h": "c"
+        "gfc_vector.h": "c",
+        "monster.h": "c",
+        "gfc_config.h": "c"
     },
     "C_Cpp.intelliSenseEngine": "default",
     "editor.wordBasedSuggestions": "allDocuments",

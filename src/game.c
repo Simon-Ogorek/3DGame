@@ -101,9 +101,9 @@ int main(int argc,char *argv[])
     
     P_Camera* p_cam = spawn_camera(player);
 
-    monsters_init(player);
+    monsters_init(player, world);
 
-    Monster* agumon_monster = spawn_monster();
+    Monster* agumon_monster = spawn_monster("friend");
 
     
     

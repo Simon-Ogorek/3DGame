@@ -8,7 +8,7 @@
 Player *tracked_player;
 P_Camera *cam;
 
-GFC_Vector3D camera_offset = {0,10,50};
+GFC_Vector3D camera_offset = {0,10,150};
 P_Camera *spawn_camera(Player *player)
 {
     cam = (P_Camera *)malloc(sizeof(P_Camera));
@@ -106,7 +106,7 @@ void camera_think(Entity *ent)
         return;
     }
     gfc_vector3d_rotate_about_z(&tracked_player->ent->rotation,mouse_vel.x * cam->sens_x * -1);
-    gfc_vector3d_rotate_about_x(&tracked_player->ent->rotation,mouse_vel.y * cam->sens_y * -1);
+    gfc_vector3d_rotate_about_x(&tracked_player->ent->rotation,mouse_vel.y * cam->sens_y);
 
 }
 void camera_update(Entity *ent)

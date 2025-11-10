@@ -115,6 +115,7 @@ void player_think(Entity *ent)
         predicted_move.z -= speed;
     }
 
+    
     GFC_Vector3D groundTestPoint = gfc_vector3d_added(predicted_move, gfc_vector3d(0,0,-100));
     GFC_Edge3D groundTestEdge = gfc_edge3d_from_vectors(predicted_move, groundTestPoint);
     GFC_Vector3D contact;
@@ -131,27 +132,6 @@ void player_think(Entity *ent)
 
     return;
 }
-
-    
-    /*for (int i = 0; i < gfc_list_count(curr_world.ent->mesh->primitives); i++)
-    {
-        if (gfc_prim_ray_collide(
-            groundTestEdge, 
-            (MeshPrimitive *)gfc_list_get_nth(curr_world.ent->mesh->primitives, i),
-            contact
-        ))
-        {
-            slog("got a hit %f,%f,%f", contact->x, contact->y, contact->z);
-        }
-    }
-    slog("%f,%f,%f",ent->position.x,ent->position.y,ent->position.z);
-    */
-    /*slog("test edge is a:{%f,%f,%f}, b:{%f,%f,%f}", groundTestEdge.a.x, groundTestEdge.a.y, groundTestEdge.a.z, groundTestEdge.b.x, groundTestEdge.b.y, groundTestEdge.b.z);
-    if (gfc_prim_ray_collide(groundTestEdge, world_prim, contact))
-    {
-        slog("got a hit %f,%f,%f", contact->x, contact->y, contact->z);
-    }*/
-
 void player_update(Entity *ent)
 {
     //slog("player update");

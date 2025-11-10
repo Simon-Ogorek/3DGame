@@ -65,11 +65,35 @@ World *spawn_world()
 
     //world->ent->rotation.y = 180;
     world->ent->scale = gfc_vector3d(8,8,8);
+    world->walkable->scale =  gfc_vector3d(8,8,8);
+    gfc_matrix4_identity(id);
+    gfc_matrix4_rotate_z(world->walkable->matrix,id,0);
 
     //GFC_Matrix4 id;
     gfc_matrix4_identity(id);
     gfc_matrix4_rotate_z(world->skybox->matrix,id,0);
     world->skybox->scale = gfc_vector3d(8,8,8);
+
+    gfc_matrix4_from_vectors(
+        world->ent->matrix,
+        world->ent->position,
+        world->ent->rotation,
+        world->ent->scale
+    );
+
+    gfc_matrix4_from_vectors(
+        world->walkable->matrix,
+        world->walkable->position,
+        world->walkable->rotation,
+        world->walkable->scale
+    );
+
+    gfc_matrix4_from_vectors(
+        world->skybox->matrix,
+        world->skybox->position,
+        world->skybox->rotation,
+        world->skybox->scale
+    );
     return world;
 
     
@@ -99,13 +123,6 @@ void world_think(Entity *ent)
 void world_update(Entity *ent)
 {
     //slog("world update");
-
-    gfc_matrix4_from_vectors(
-        ent->matrix,
-        ent->position,
-        ent->rotation,
-        ent->scale
-    );
 }
 
 void world_draw(Entity *ent)

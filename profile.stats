@@ -1,0 +1,1534 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 11.50      2.12     2.12                             gfc_matrix4_multiply_v
+ 10.39      4.03     1.91      584     3.27     3.27  gf3d_obj_edge_test
+ 10.30      5.92     1.90                             gfc_vector3d
+  8.65      7.51     1.59                             gfc_edge_in_plane
+  8.32      9.04     1.53                             gfc_vector3d_normalize
+  7.50     10.42     1.38                             gfc_vector4d
+  7.29     11.76     1.34                             gfc_vector3d_magnitude
+  6.47     12.95     1.19                             gfc_point_same_side
+  5.41     13.95     0.99                             gfc_trigfc_angle_get_normal
+  5.08     14.88     0.94                             gfc_vector4dxyz
+  4.87     15.78     0.90                             gfc_trigfc_angle_get_plane
+  4.68     16.64     0.86                             gfc_vector3d_cross_product
+  3.75     17.32     0.69                             gfc_trigfc_angle_edge_test
+  3.10     17.89     0.57                             gfc_vector3dw
+  1.63     18.20     0.30                             gfc_point_in_triangle
+  0.41     18.27     0.07                             gfc_vector2dz
+  0.16     18.30     0.03        5     6.00     6.00  gf3d_obj_load_get_data_from_file
+  0.14     18.32     0.03                             gfc_matrix2_v_multiply
+  0.14     18.35     0.03                             gfc_vector2d
+  0.11     18.37     0.02                             get_file_Size
+  0.05     18.38     0.01      292     0.03     6.58  entity_system_think_all
+  0.05     18.39     0.01                             _init
+  0.00     18.39     0.00     3796     0.00     0.00  gf3d_vgraphics_get_current_buffer_frame
+  0.00     18.39     0.00     2100     0.00     0.00  gf3d_vqueues_get_graphics_queue
+  0.00     18.39     0.00     2044     0.00     0.00  gf3d_uniform_buffer_list_get_nth_buffer
+  0.00     18.39     0.00     1792     0.00     0.00  gf3d_vgraphics_get_graphics_command_pool
+  0.00     18.39     0.00     1755     0.00     0.00  gf3d_swapchain_get_extent
+  0.00     18.39     0.00     1460     0.00     0.00  gf3d_pipeline_call_render
+  0.00     18.39     0.00     1460     0.00     0.00  gf3d_pipeline_draw_call_new
+  0.00     18.39     0.00     1460     0.00     0.00  gf3d_pipeline_get_descriptor_set
+  0.00     18.39     0.00     1460     0.00     0.00  gf3d_pipeline_queue_render
+  0.00     18.39     0.00     1460     0.00     0.00  gf3d_pipeline_render_drawcall
+  0.00     18.39     0.00     1460     0.00     0.00  gf3d_pipeline_update_descriptor_set
+  0.00     18.39     0.00     1168     0.00     0.00  entity_draw
+  0.00     18.39     0.00     1168     0.00     0.00  gf3d_camera_get_position
+  0.00     18.39     0.00     1168     0.00     0.00  gf3d_mesh_draw
+  0.00     18.39     0.00     1168     0.00     0.00  gf3d_mesh_primitive_queue_render
+  0.00     18.39     0.00     1168     0.00     0.00  gf3d_mesh_queue_render
+  0.00     18.39     0.00     1168     0.00     0.00  gf3d_vgraphics_get_projection_matrix
+  0.00     18.39     0.00     1168     0.00     0.00  gf3d_vgraphics_get_view
+  0.00     18.39     0.00      904     0.00     0.00  gf3d_command_begin_single_time
+  0.00     18.39     0.00      904     0.00     0.00  gf3d_command_end_single_time
+  0.00     18.39     0.00      876     0.00     0.00  gf3_pipeline_update_ubos
+  0.00     18.39     0.00      876     0.00     0.00  gf3d_command_configure_render_pass
+  0.00     18.39     0.00      876     0.00     0.00  gf3d_command_configure_render_pass_end
+  0.00     18.39     0.00      876     0.00     0.00  gf3d_command_rendering_begin
+  0.00     18.39     0.00      876     0.00     0.00  gf3d_command_rendering_end
+  0.00     18.39     0.00      876     0.00     0.00  gf3d_pipeline_render_all_drawcalls
+  0.00     18.39     0.00      876     0.00     0.00  gf3d_pipeline_reset_frame
+  0.00     18.39     0.00      876     0.00     0.00  gf3d_pipeline_submit_commands
+  0.00     18.39     0.00      876     0.00     0.00  gf3d_pipeline_update_descriptor_sets
+  0.00     18.39     0.00      876     0.00     0.00  gf3d_swapchain_get_frame_buffer_by_index
+  0.00     18.39     0.00      876     0.00     0.00  gf3d_vgraphics_get_view_extent_as_vector2d
+  0.00     18.39     0.00      767     0.00     0.00  gf3d_vgraphics_get_default_logical_device
+  0.00     18.39     0.00      584     0.00     0.00  gf3d_swapchain_get
+  0.00     18.39     0.00      584     0.00     0.00  world_draw
+  0.00     18.39     0.00      584     0.00     0.00  world_think
+  0.00     18.39     0.00      584     0.00     0.00  world_update
+  0.00     18.39     0.00      292     0.00     0.00  camera_think
+  0.00     18.39     0.00      292     0.00     0.00  camera_update
+  0.00     18.39     0.00      292     0.00     0.00  entity_system_draw_all
+  0.00     18.39     0.00      292     0.00     0.00  entity_system_update_all
+  0.00     18.39     0.00      292     0.00     0.00  game_frame_delay
+  0.00     18.39     0.00      292     0.00     0.00  gf2d_actor_draw
+  0.00     18.39     0.00      292     0.00     0.00  gf2d_font_draw_line
+  0.00     18.39     0.00      292     0.00     0.00  gf2d_font_draw_line_tag
+  0.00     18.39     0.00      292     0.00     0.00  gf2d_font_get_by_tag
+  0.00     18.39     0.00      292     0.00     0.00  gf2d_font_image_get
+  0.00     18.39     0.00      292     0.00     0.00  gf2d_font_update
+  0.00     18.39     0.00      292     0.00     0.00  gf2d_mouse_draw
+  0.00     18.39     0.00      292     0.00     0.00  gf2d_mouse_get_position_from_center
+  0.00     18.39     0.00      292     0.00     0.00  gf2d_mouse_update
+  0.00     18.39     0.00      292     0.00     0.00  gf2d_sprite_draw
+  0.00     18.39     0.00      292     0.00     0.00  gf2d_sprite_draw_full
+  0.00     18.39     0.00      292     0.00     0.00  gf2d_sprite_get_uniform_buffer
+  0.00     18.39     0.00      292     0.00     0.00  gf3d_camera_look_at
+  0.00     18.39     0.00      292     0.00     0.00  gf3d_camera_set_position
+  0.00     18.39     0.00      292     0.00     0.00  gf3d_camera_set_rotation
+  0.00     18.39     0.00      292     0.00     0.00  gf3d_camera_update_view
+  0.00     18.39     0.00      292     0.00     0.00  gf3d_command_pool_get_used_buffer_count
+  0.00     18.39     0.00      292     0.00     0.00  gf3d_command_pool_get_used_buffers
+  0.00     18.39     0.00      292     0.00     0.00  gf3d_pipeline_reset_all_pipes
+  0.00     18.39     0.00      292     0.00     0.00  gf3d_pipeline_submit_all_pipe_commands
+  0.00     18.39     0.00      292     0.00     0.00  gf3d_vgraphics_render_begin
+  0.00     18.39     0.00      292     0.00     0.00  gf3d_vgraphics_render_end
+  0.00     18.39     0.00      292     0.00     0.00  gf3d_vgraphics_render_start
+  0.00     18.39     0.00      292     0.00     0.00  gf3d_vgraphics_set_view
+  0.00     18.39     0.00      292     0.00     0.00  gf3d_vqueues_get_present_queue
+  0.00     18.39     0.00      292     0.00     0.00  monster_draw
+  0.00     18.39     0.00      292     0.00     3.27  monster_navigate_to_player
+  0.00     18.39     0.00      292     0.00     3.27  monster_think
+  0.00     18.39     0.00      292     0.00     0.00  monster_update
+  0.00     18.39     0.00      292     0.00     0.00  player_draw
+  0.00     18.39     0.00      292     0.00     3.27  player_think
+  0.00     18.39     0.00      292     0.00     0.00  player_update
+  0.00     18.39     0.00      292     0.00     0.00  resetMouseToCenter
+  0.00     18.39     0.00      256     0.00     0.00  gf3d_texture_delete
+  0.00     18.39     0.00      134     0.00     0.00  gf3d_texture_free
+  0.00     18.39     0.00      128     0.00     0.00  gf2d_actor_delete
+  0.00     18.39     0.00      128     0.00     0.00  gf2d_sprite_delete
+  0.00     18.39     0.00       64     0.00     0.00  gf3d_command_free
+  0.00     18.39     0.00       53     0.00     0.00  gf3d_vgraphics_get_default_physical_device
+  0.00     18.39     0.00       46     0.00     0.00  gf3d_vgraphics_find_memory_type
+  0.00     18.39     0.00       41     0.00     0.00  gf3d_buffer_create
+  0.00     18.39     0.00       16     0.00     0.00  gf3d_pipeline_free
+  0.00     18.39     0.00       12     0.00     0.00  gf3d_buffer_copy
+  0.00     18.39     0.00       12     0.00     0.00  gf3d_config_descriptor_type_from_str
+  0.00     18.39     0.00       12     0.00     0.00  gf3d_config_image_layer_from_str
+  0.00     18.39     0.00       12     0.00     0.00  gf3d_config_parse_blend_factor
+  0.00     18.39     0.00       12     0.00     0.00  gf3d_config_parse_color_component_flag_bits
+  0.00     18.39     0.00       11     0.00     0.00  gf3d_swapchain_transition_image_layout
+  0.00     18.39     0.00        9     0.00     0.00  gf3d_config_parse_sample_count_bits
+  0.00     18.39     0.00        9     0.00     0.00  gf3d_vgraphics_create_image_view
+  0.00     18.39     0.00        8     0.00     0.00  gf2d_font_type_from_text
+  0.00     18.39     0.00        7     0.00     0.00  gf3d_config_shader_stage_flag_from_str
+  0.00     18.39     0.00        6     0.00     0.00  entity_free
+  0.00     18.39     0.00        6     0.00     0.00  entity_new
+  0.00     18.39     0.00        6     0.00     0.00  gf3d_config_access_flag_bits_from_str
+  0.00     18.39     0.00        6     0.00     0.00  gf3d_config_attachment_description
+  0.00     18.39     0.00        6     0.00     0.00  gf3d_config_pipeline_stage_flags_from_str
+  0.00     18.39     0.00        6     0.00     0.00  gf3d_config_shader_stage_flags
+  0.00     18.39     0.00        6     0.00     0.00  gf3d_mesh_free
+  0.00     18.39     0.00        6     0.00     0.00  gf3d_pipeline_find_depth_format
+  0.00     18.39     0.00        6     0.00     0.00  gf3d_pipeline_find_supported_format
+  0.00     18.39     0.00        6     0.00     0.00  gf3d_shaders_create_module
+  0.00     18.39     0.00        6     0.00     0.00  gf3d_shaders_load_data
+  0.00     18.39     0.00        6     0.00     0.00  gf3d_swapchain_get_swap_image_count
+  0.00     18.39     0.00        5     0.00     0.00  gf3d_mesh_create_vertex_buffer_from_vertices
+  0.00     18.39     0.00        5     0.00     0.00  gf3d_mesh_get_by_filename
+  0.00     18.39     0.00        5     0.00     6.00  gf3d_mesh_load
+  0.00     18.39     0.00        5     0.00     0.00  gf3d_mesh_new
+  0.00     18.39     0.00        5     0.00     0.00  gf3d_mesh_primitive_new
+  0.00     18.39     0.00        5     0.00     0.00  gf3d_mesh_setup_face_buffers
+  0.00     18.39     0.00        5     0.00     0.00  gf3d_obj_get_bounds
+  0.00     18.39     0.00        5     0.00     0.00  gf3d_obj_get_counts_from_file
+  0.00     18.39     0.00        5     0.00     6.00  gf3d_obj_load_from_file
+  0.00     18.39     0.00        5     0.00     0.00  gf3d_obj_load_reorg
+  0.00     18.39     0.00        5     0.00     0.00  gf3d_texture_convert_surface
+  0.00     18.39     0.00        5     0.00     0.00  gf3d_texture_copy_buffer_to_image
+  0.00     18.39     0.00        5     0.00     0.00  gf3d_texture_create_sampler
+  0.00     18.39     0.00        5     0.00     0.00  gf3d_texture_get_by_filename
+  0.00     18.39     0.00        5     0.00     0.00  gf3d_texture_load
+  0.00     18.39     0.00        5     0.00     0.00  gf3d_texture_new
+  0.00     18.39     0.00        5     0.00     0.00  gf3d_vgraphics_screen_convert
+  0.00     18.39     0.00        4     0.00     0.00  gf3d_swapchain_create_frame_buffer
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_config_access_flag_bits
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_config_color_component_flag_bits
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_config_compar_op_flag_from_str
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_config_parse_blend_op
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_config_parse_cull_mode
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_config_parse_front_face
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_config_parse_polygon_mode
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_config_pipeline_bindpoint_from_str
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_config_pipeline_color_blend_attachment
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_config_pipline_multisample_state_create_info
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_config_pipline_rasterization_state_create_info
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_config_primitive_topology_from_str
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_config_subpass_dependency
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_extensions_check_available
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_extensions_enable
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_mesh_get_attribute_descriptions
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_pipelin_depth_stencil_create_info_from_json
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_pipeline_create_basic_descriptor_pool
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_pipeline_create_basic_descriptor_pool_from_config
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_pipeline_create_basic_descriptor_set_layout_from_config
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_pipeline_create_descriptor_sets
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_pipeline_create_from_config
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_pipeline_new
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_pipeline_render_pass_create
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_swapchain_get_format
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_uniform_buffer_list_free
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_uniform_buffer_list_new
+  0.00     18.39     0.00        3     0.00     0.00  gf3d_vgraphics_get_view_extent
+  0.00     18.39     0.00        2     0.00     0.00  gf2d_sprite_get_attribute_descriptions
+  0.00     18.39     0.00        2     0.00     0.00  gf3d_device_get_info
+  0.00     18.39     0.00        2     0.00     0.00  gf3d_devices_get_best_device
+  0.00     18.39     0.00        2     0.00     0.00  gf3d_extensions_config
+  0.00     18.39     0.00        2     0.00     0.00  gf3d_mesh_get_bind_description
+  0.00     18.39     0.00        2     0.00     0.00  gf3d_swapchain_get_chain_length
+  0.00     18.39     0.00        2     0.00     0.00  gf3d_texture_delete_all
+  0.00     18.39     0.00        2     0.00     0.00  gf3d_texture_init
+  0.00     18.39     0.00        2     0.00     0.00  gf3d_vqueues_get_graphics_queue_family
+  0.00     18.39     0.00        1     0.00     0.00  entity_system_init
+  0.00     18.39     0.00        1     0.00     0.00  gf2d_actor_clear_all
+  0.00     18.39     0.00        1     0.00     0.00  gf2d_actor_init
+  0.00     18.39     0.00        1     0.00     0.00  gf2d_font_image_new
+  0.00     18.39     0.00        1     0.00     0.00  gf2d_font_init
+  0.00     18.39     0.00        1     0.00     0.00  gf2d_fonts_load_json
+  0.00     18.39     0.00        1     0.00     0.00  gf2d_sprite_create_vertex_buffer
+  0.00     18.39     0.00        1     0.00     0.00  gf2d_sprite_free
+  0.00     18.39     0.00        1     0.00     0.00  gf2d_sprite_from_surface
+  0.00     18.39     0.00        1     0.00     0.00  gf2d_sprite_get_bind_description
+  0.00     18.39     0.00        1     0.00     0.00  gf2d_sprite_manager_init
+  0.00     18.39     0.00        1     0.00     0.00  gf2d_sprite_new
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_command_graphics_pool_setup
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_command_pool_new
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_command_system_init
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_debug_close
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_device_create_logic_device
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_device_get
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_device_get_logical_device_info
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_device_manager_determine_best
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_device_manager_init
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_devices_enumerate
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_extensions_device_init
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_extensions_get_device_enabled_names
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_extensions_get_instance_enabled_names
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_extensions_instance_init
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_mesh_get_pipeline
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_mesh_init
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_pipeline_init
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_swapchain_choose_format
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_swapchain_configure_extent
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_swapchain_create
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_swapchain_create_depth_image
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_swapchain_create_image
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_swapchain_create_image_view
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_swapchain_find_Memory_type
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_swapchain_get_presentation_mode
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_swapchain_has_stencil_component
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_swapchain_init
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_swapchain_setup_frame_buffers
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_vgraphics_init
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_vgraphics_semaphores_create
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_vgraphics_setup
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_vqueues_choose_graphics_family
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_vqueues_choose_present_family
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_vqueues_choose_transfer_family
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_vqueues_get_graphics_queue_info
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_vqueues_get_present_queue_family
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_vqueues_get_present_queue_info
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_vqueues_get_queue_create_info
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_vqueues_get_transfer_queue_family
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_vqueues_init
+  0.00     18.39     0.00        1     0.00     0.00  gf3d_vqueues_setup_device_queues
+  0.00     18.39     0.00        1     0.00     0.00  monsters_init
+  0.00     18.39     0.00        1     0.00     0.00  parse_arguments
+  0.00     18.39     0.00        1     0.00     0.00  spawn_camera
+  0.00     18.39     0.00        1     0.00     6.00  spawn_monster
+  0.00     18.39     0.00        1     0.00     6.00  spawn_player
+  0.00     18.39     0.00        1     0.00    18.00  spawn_world
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2024 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 4 byte(s) for 0.05% of 18.39 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     11.5    2.12    0.00                 gfc_matrix4_multiply_v [1]
+-----------------------------------------------
+                                                 <spontaneous>
+[2]     10.6    0.00    1.95                 main [2]
+                0.01    1.91     292/292         entity_system_think_all [3]
+                0.00    0.02       1/1           spawn_world [28]
+                0.00    0.01       1/1           spawn_player [31]
+                0.00    0.01       1/1           spawn_monster [30]
+                0.00    0.00     292/292         gf2d_font_update [78]
+                0.00    0.00     292/292         gf2d_mouse_update [81]
+                0.00    0.00     292/292         gf3d_camera_update_view [88]
+                0.00    0.00     292/292         entity_system_update_all [71]
+                0.00    0.00     292/292         entity_system_draw_all [70]
+                0.00    0.00     292/292         gf3d_vgraphics_render_start [95]
+                0.00    0.00     292/292         gf2d_font_draw_line_tag [75]
+                0.00    0.00     292/292         gf3d_vgraphics_render_end [94]
+                0.00    0.00     292/292         gf2d_mouse_draw [79]
+                0.00    0.00     292/292         game_frame_delay [72]
+                0.00    0.00       1/1           parse_arguments [241]
+                0.00    0.00       1/1           gf3d_vgraphics_init [227]
+                0.00    0.00       1/1           gf2d_font_init [191]
+                0.00    0.00       1/1           gf2d_actor_init [189]
+                0.00    0.00       1/1           gf2d_sprite_manager_init [197]
+                0.00    0.00       1/1           entity_system_init [187]
+                0.00    0.00       1/2           gf3d_texture_init [185]
+                0.00    0.00       1/1           spawn_camera [242]
+                0.00    0.00       1/1           monsters_init [240]
+                0.00    0.00       1/767         gf3d_vgraphics_get_default_logical_device [63]
+-----------------------------------------------
+                0.01    1.91     292/292         main [2]
+[3]     10.4    0.01    1.91     292         entity_system_think_all [3]
+                0.00    0.95     292/292         monster_think [13]
+                0.00    0.95     292/292         player_think [14]
+                0.00    0.00     584/584         world_think [66]
+                0.00    0.00     292/292         camera_think [68]
+-----------------------------------------------
+                0.95    0.00     292/584         monster_navigate_to_player [12]
+                0.95    0.00     292/584         player_think [14]
+[4]     10.4    1.91    0.00     584         gf3d_obj_edge_test [4]
+-----------------------------------------------
+                                                 <spontaneous>
+[5]     10.3    1.90    0.00                 gfc_vector3d [5]
+-----------------------------------------------
+                                                 <spontaneous>
+[6]      8.6    1.59    0.00                 gfc_edge_in_plane [6]
+-----------------------------------------------
+                                                 <spontaneous>
+[7]      8.3    1.53    0.00                 gfc_vector3d_normalize [7]
+-----------------------------------------------
+                                                 <spontaneous>
+[8]      7.5    1.38    0.00                 gfc_vector4d [8]
+-----------------------------------------------
+                                                 <spontaneous>
+[9]      7.3    1.34    0.00                 gfc_vector3d_magnitude [9]
+-----------------------------------------------
+                                                 <spontaneous>
+[10]     6.5    1.19    0.00                 gfc_point_same_side [10]
+-----------------------------------------------
+                                                 <spontaneous>
+[11]     5.4    0.99    0.00                 gfc_trigfc_angle_get_normal [11]
+-----------------------------------------------
+                0.00    0.95     292/292         monster_think [13]
+[12]     5.2    0.00    0.95     292         monster_navigate_to_player [12]
+                0.95    0.00     292/584         gf3d_obj_edge_test [4]
+-----------------------------------------------
+                0.00    0.95     292/292         entity_system_think_all [3]
+[13]     5.2    0.00    0.95     292         monster_think [13]
+                0.00    0.95     292/292         monster_navigate_to_player [12]
+-----------------------------------------------
+                0.00    0.95     292/292         entity_system_think_all [3]
+[14]     5.2    0.00    0.95     292         player_think [14]
+                0.95    0.00     292/584         gf3d_obj_edge_test [4]
+-----------------------------------------------
+                                                 <spontaneous>
+[15]     5.1    0.94    0.00                 gfc_vector4dxyz [15]
+-----------------------------------------------
+                                                 <spontaneous>
+[16]     4.9    0.90    0.00                 gfc_trigfc_angle_get_plane [16]
+-----------------------------------------------
+                                                 <spontaneous>
+[17]     4.7    0.86    0.00                 gfc_vector3d_cross_product [17]
+-----------------------------------------------
+                                                 <spontaneous>
+[18]     3.8    0.69    0.00                 gfc_trigfc_angle_edge_test [18]
+-----------------------------------------------
+                                                 <spontaneous>
+[19]     3.1    0.57    0.00                 gfc_vector3dw [19]
+-----------------------------------------------
+                                                 <spontaneous>
+[20]     1.6    0.30    0.00                 gfc_point_in_triangle [20]
+-----------------------------------------------
+                                                 <spontaneous>
+[21]     0.4    0.07    0.00                 gfc_vector2dz [21]
+-----------------------------------------------
+                0.00    0.01       1/5           spawn_monster [30]
+                0.00    0.01       1/5           spawn_player [31]
+                0.00    0.02       3/5           spawn_world [28]
+[22]     0.2    0.00    0.03       5         gf3d_mesh_load [22]
+                0.00    0.03       5/5           gf3d_obj_load_from_file [23]
+                0.00    0.00       5/5           gf3d_mesh_get_by_filename [135]
+                0.00    0.00       5/5           gf3d_mesh_new [136]
+                0.00    0.00       5/5           gf3d_mesh_primitive_new [137]
+                0.00    0.00       5/5           gf3d_mesh_create_vertex_buffer_from_vertices [134]
+                0.00    0.00       5/5           gf3d_mesh_setup_face_buffers [138]
+-----------------------------------------------
+                0.00    0.03       5/5           gf3d_mesh_load [22]
+[23]     0.2    0.00    0.03       5         gf3d_obj_load_from_file [23]
+                0.03    0.00       5/5           gf3d_obj_load_get_data_from_file [24]
+                0.00    0.00       5/5           gf3d_obj_get_counts_from_file [140]
+                0.00    0.00       5/5           gf3d_obj_get_bounds [139]
+                0.00    0.00       5/5           gf3d_obj_load_reorg [141]
+-----------------------------------------------
+                0.03    0.00       5/5           gf3d_obj_load_from_file [23]
+[24]     0.2    0.03    0.00       5         gf3d_obj_load_get_data_from_file [24]
+-----------------------------------------------
+                                                 <spontaneous>
+[25]     0.1    0.03    0.00                 gfc_matrix2_v_multiply [25]
+-----------------------------------------------
+                                                 <spontaneous>
+[26]     0.1    0.03    0.00                 gfc_vector2d [26]
+-----------------------------------------------
+                                                 <spontaneous>
+[27]     0.1    0.02    0.00                 get_file_Size [27]
+-----------------------------------------------
+                0.00    0.02       1/1           main [2]
+[28]     0.1    0.00    0.02       1         spawn_world [28]
+                0.00    0.02       3/5           gf3d_mesh_load [22]
+                0.00    0.00       3/6           entity_new [123]
+                0.00    0.00       2/5           gf3d_texture_load [146]
+-----------------------------------------------
+                                                 <spontaneous>
+[29]     0.1    0.01    0.00                 _init [29]
+-----------------------------------------------
+                0.00    0.01       1/1           main [2]
+[30]     0.0    0.00    0.01       1         spawn_monster [30]
+                0.00    0.01       1/5           gf3d_mesh_load [22]
+                0.00    0.00       1/6           entity_new [123]
+                0.00    0.00       1/5           gf3d_texture_load [146]
+-----------------------------------------------
+                0.00    0.01       1/1           main [2]
+[31]     0.0    0.00    0.01       1         spawn_player [31]
+                0.00    0.01       1/5           gf3d_mesh_load [22]
+                0.00    0.00       1/6           entity_new [123]
+                0.00    0.00       1/5           gf3d_texture_load [146]
+-----------------------------------------------
+                0.00    0.00     292/3796        gf3d_pipeline_reset_all_pipes [91]
+                0.00    0.00     584/3796        gf3_pipeline_update_ubos [52]
+                0.00    0.00    1460/3796        gf3d_pipeline_update_descriptor_set [42]
+                0.00    0.00    1460/3796        gf3d_pipeline_queue_render [40]
+[32]     0.0    0.00    0.00    3796         gf3d_vgraphics_get_current_buffer_frame [32]
+-----------------------------------------------
+                0.00    0.00     292/2100        gf3d_vgraphics_render_end [94]
+                0.00    0.00    1808/2100        gf3d_command_end_single_time [51]
+[33]     0.0    0.00    0.00    2100         gf3d_vqueues_get_graphics_queue [33]
+-----------------------------------------------
+                0.00    0.00     584/2044        gf3_pipeline_update_ubos [52]
+                0.00    0.00    1460/2044        gf3d_pipeline_update_descriptor_set [42]
+[34]     0.0    0.00    0.00    2044         gf3d_uniform_buffer_list_get_nth_buffer [34]
+-----------------------------------------------
+                0.00    0.00       5/1792        gf3d_texture_copy_buffer_to_image [143]
+                0.00    0.00      11/1792        gf3d_swapchain_transition_image_layout [117]
+                0.00    0.00      24/1792        gf3d_buffer_copy [112]
+                0.00    0.00     876/1792        gf3d_command_rendering_begin [55]
+                0.00    0.00     876/1792        gf3d_command_rendering_end [56]
+[35]     0.0    0.00    0.00    1792         gf3d_vgraphics_get_graphics_command_pool [35]
+-----------------------------------------------
+                0.00    0.00       3/1755        gf3d_vgraphics_get_view_extent [177]
+                0.00    0.00     876/1755        gf3d_command_configure_render_pass [53]
+                0.00    0.00     876/1755        gf3d_vgraphics_get_view_extent_as_vector2d [62]
+[36]     0.0    0.00    0.00    1755         gf3d_swapchain_get_extent [36]
+-----------------------------------------------
+                0.00    0.00    1460/1460        gf3d_pipeline_render_drawcall [41]
+[37]     0.0    0.00    0.00    1460         gf3d_pipeline_call_render [37]
+-----------------------------------------------
+                0.00    0.00    1460/1460        gf3d_pipeline_queue_render [40]
+[38]     0.0    0.00    0.00    1460         gf3d_pipeline_draw_call_new [38]
+-----------------------------------------------
+                0.00    0.00    1460/1460        gf3d_pipeline_queue_render [40]
+[39]     0.0    0.00    0.00    1460         gf3d_pipeline_get_descriptor_set [39]
+-----------------------------------------------
+                0.00    0.00     292/1460        gf2d_sprite_draw [82]
+                0.00    0.00    1168/1460        gf3d_mesh_primitive_queue_render [46]
+[40]     0.0    0.00    0.00    1460         gf3d_pipeline_queue_render [40]
+                0.00    0.00    1460/1460        gf3d_pipeline_draw_call_new [38]
+                0.00    0.00    1460/3796        gf3d_vgraphics_get_current_buffer_frame [32]
+                0.00    0.00    1460/1460        gf3d_pipeline_get_descriptor_set [39]
+-----------------------------------------------
+                0.00    0.00    1460/1460        gf3d_pipeline_render_all_drawcalls [57]
+[41]     0.0    0.00    0.00    1460         gf3d_pipeline_render_drawcall [41]
+                0.00    0.00    1460/1460        gf3d_pipeline_call_render [37]
+-----------------------------------------------
+                0.00    0.00    1460/1460        gf3d_pipeline_update_descriptor_sets [60]
+[42]     0.0    0.00    0.00    1460         gf3d_pipeline_update_descriptor_set [42]
+                0.00    0.00    1460/3796        gf3d_vgraphics_get_current_buffer_frame [32]
+                0.00    0.00    1460/2044        gf3d_uniform_buffer_list_get_nth_buffer [34]
+-----------------------------------------------
+                0.00    0.00     292/1168        monster_draw [98]
+                0.00    0.00     292/1168        player_draw [100]
+                0.00    0.00     584/1168        world_draw [65]
+[43]     0.0    0.00    0.00    1168         entity_draw [43]
+                0.00    0.00    1168/1168        gf3d_mesh_draw [45]
+-----------------------------------------------
+                0.00    0.00    1168/1168        gf3d_mesh_draw [45]
+[44]     0.0    0.00    0.00    1168         gf3d_camera_get_position [44]
+-----------------------------------------------
+                0.00    0.00    1168/1168        entity_draw [43]
+[45]     0.0    0.00    0.00    1168         gf3d_mesh_draw [45]
+                0.00    0.00    1168/1168        gf3d_vgraphics_get_view [49]
+                0.00    0.00    1168/1168        gf3d_vgraphics_get_projection_matrix [48]
+                0.00    0.00    1168/1168        gf3d_camera_get_position [44]
+                0.00    0.00    1168/1168        gf3d_mesh_queue_render [47]
+-----------------------------------------------
+                0.00    0.00    1168/1168        gf3d_mesh_queue_render [47]
+[46]     0.0    0.00    0.00    1168         gf3d_mesh_primitive_queue_render [46]
+                0.00    0.00    1168/1460        gf3d_pipeline_queue_render [40]
+-----------------------------------------------
+                0.00    0.00    1168/1168        gf3d_mesh_draw [45]
+[47]     0.0    0.00    0.00    1168         gf3d_mesh_queue_render [47]
+                0.00    0.00    1168/1168        gf3d_mesh_primitive_queue_render [46]
+-----------------------------------------------
+                0.00    0.00    1168/1168        gf3d_mesh_draw [45]
+[48]     0.0    0.00    0.00    1168         gf3d_vgraphics_get_projection_matrix [48]
+-----------------------------------------------
+                0.00    0.00    1168/1168        gf3d_mesh_draw [45]
+[49]     0.0    0.00    0.00    1168         gf3d_vgraphics_get_view [49]
+-----------------------------------------------
+                0.00    0.00       5/904         gf3d_texture_copy_buffer_to_image [143]
+                0.00    0.00      11/904         gf3d_swapchain_transition_image_layout [117]
+                0.00    0.00      12/904         gf3d_buffer_copy [112]
+                0.00    0.00     876/904         gf3d_command_rendering_begin [55]
+[50]     0.0    0.00    0.00     904         gf3d_command_begin_single_time [50]
+-----------------------------------------------
+                0.00    0.00       5/904         gf3d_texture_copy_buffer_to_image [143]
+                0.00    0.00      11/904         gf3d_swapchain_transition_image_layout [117]
+                0.00    0.00      12/904         gf3d_buffer_copy [112]
+                0.00    0.00     876/904         gf3d_command_rendering_end [56]
+[51]     0.0    0.00    0.00     904         gf3d_command_end_single_time [51]
+                0.00    0.00    1808/2100        gf3d_vqueues_get_graphics_queue [33]
+-----------------------------------------------
+                0.00    0.00     876/876         gf3d_pipeline_submit_all_pipe_commands [92]
+[52]     0.0    0.00    0.00     876         gf3_pipeline_update_ubos [52]
+                0.00    0.00     584/767         gf3d_vgraphics_get_default_logical_device [63]
+                0.00    0.00     584/3796        gf3d_vgraphics_get_current_buffer_frame [32]
+                0.00    0.00     584/2044        gf3d_uniform_buffer_list_get_nth_buffer [34]
+-----------------------------------------------
+                0.00    0.00     876/876         gf3d_command_rendering_begin [55]
+[53]     0.0    0.00    0.00     876         gf3d_command_configure_render_pass [53]
+                0.00    0.00     876/1755        gf3d_swapchain_get_extent [36]
+-----------------------------------------------
+                0.00    0.00     876/876         gf3d_command_rendering_end [56]
+[54]     0.0    0.00    0.00     876         gf3d_command_configure_render_pass_end [54]
+-----------------------------------------------
+                0.00    0.00     876/876         gf3d_pipeline_reset_frame [58]
+[55]     0.0    0.00    0.00     876         gf3d_command_rendering_begin [55]
+                0.00    0.00     876/1792        gf3d_vgraphics_get_graphics_command_pool [35]
+                0.00    0.00     876/904         gf3d_command_begin_single_time [50]
+                0.00    0.00     876/876         gf3d_swapchain_get_frame_buffer_by_index [61]
+                0.00    0.00     876/876         gf3d_command_configure_render_pass [53]
+-----------------------------------------------
+                0.00    0.00     876/876         gf3d_pipeline_submit_commands [59]
+[56]     0.0    0.00    0.00     876         gf3d_command_rendering_end [56]
+                0.00    0.00     876/1792        gf3d_vgraphics_get_graphics_command_pool [35]
+                0.00    0.00     876/876         gf3d_command_configure_render_pass_end [54]
+                0.00    0.00     876/904         gf3d_command_end_single_time [51]
+-----------------------------------------------
+                0.00    0.00     876/876         gf3d_pipeline_submit_all_pipe_commands [92]
+[57]     0.0    0.00    0.00     876         gf3d_pipeline_render_all_drawcalls [57]
+                0.00    0.00    1460/1460        gf3d_pipeline_render_drawcall [41]
+-----------------------------------------------
+                0.00    0.00     876/876         gf3d_pipeline_reset_all_pipes [91]
+[58]     0.0    0.00    0.00     876         gf3d_pipeline_reset_frame [58]
+                0.00    0.00     876/876         gf3d_command_rendering_begin [55]
+-----------------------------------------------
+                0.00    0.00     876/876         gf3d_pipeline_submit_all_pipe_commands [92]
+[59]     0.0    0.00    0.00     876         gf3d_pipeline_submit_commands [59]
+                0.00    0.00     876/876         gf3d_command_rendering_end [56]
+-----------------------------------------------
+                0.00    0.00     876/876         gf3d_pipeline_submit_all_pipe_commands [92]
+[60]     0.0    0.00    0.00     876         gf3d_pipeline_update_descriptor_sets [60]
+                0.00    0.00    1460/1460        gf3d_pipeline_update_descriptor_set [42]
+-----------------------------------------------
+                0.00    0.00     876/876         gf3d_command_rendering_begin [55]
+[61]     0.0    0.00    0.00     876         gf3d_swapchain_get_frame_buffer_by_index [61]
+-----------------------------------------------
+                0.00    0.00     292/876         gf2d_mouse_get_position_from_center [80]
+                0.00    0.00     292/876         gf2d_sprite_get_uniform_buffer [84]
+                0.00    0.00     292/876         resetMouseToCenter [102]
+[62]     0.0    0.00    0.00     876         gf3d_vgraphics_get_view_extent_as_vector2d [62]
+                0.00    0.00     876/1755        gf3d_swapchain_get_extent [36]
+-----------------------------------------------
+                0.00    0.00       1/767         main [2]
+                0.00    0.00       1/767         gf3d_vgraphics_init [227]
+                0.00    0.00       2/767         gf2d_sprite_manager_init [197]
+                0.00    0.00       2/767         gf3d_texture_init [185]
+                0.00    0.00       3/767         gf3d_mesh_init [214]
+                0.00    0.00       5/767         gf3d_mesh_create_vertex_buffer_from_vertices [134]
+                0.00    0.00       5/767         gf3d_mesh_setup_face_buffers [138]
+                0.00    0.00     164/767         gf3d_buffer_create [110]
+                0.00    0.00     584/767         gf3_pipeline_update_ubos [52]
+[63]     0.0    0.00    0.00     767         gf3d_vgraphics_get_default_logical_device [63]
+-----------------------------------------------
+                0.00    0.00     292/584         gf3d_vgraphics_render_begin [93]
+                0.00    0.00     292/584         gf3d_vgraphics_render_end [94]
+[64]     0.0    0.00    0.00     584         gf3d_swapchain_get [64]
+-----------------------------------------------
+                0.00    0.00     584/584         entity_system_draw_all [70]
+[65]     0.0    0.00    0.00     584         world_draw [65]
+                0.00    0.00     584/1168        entity_draw [43]
+-----------------------------------------------
+                0.00    0.00     584/584         entity_system_think_all [3]
+[66]     0.0    0.00    0.00     584         world_think [66]
+-----------------------------------------------
+                0.00    0.00     584/584         entity_system_update_all [71]
+[67]     0.0    0.00    0.00     584         world_update [67]
+-----------------------------------------------
+                0.00    0.00     292/292         entity_system_think_all [3]
+[68]     0.0    0.00    0.00     292         camera_think [68]
+                0.00    0.00     292/292         gf2d_mouse_get_position_from_center [80]
+-----------------------------------------------
+                0.00    0.00     292/292         entity_system_update_all [71]
+[69]     0.0    0.00    0.00     292         camera_update [69]
+                0.00    0.00     292/292         gf3d_camera_look_at [85]
+-----------------------------------------------
+                0.00    0.00     292/292         main [2]
+[70]     0.0    0.00    0.00     292         entity_system_draw_all [70]
+                0.00    0.00     584/584         world_draw [65]
+                0.00    0.00     292/292         monster_draw [98]
+                0.00    0.00     292/292         player_draw [100]
+-----------------------------------------------
+                0.00    0.00     292/292         main [2]
+[71]     0.0    0.00    0.00     292         entity_system_update_all [71]
+                0.00    0.00     584/584         world_update [67]
+                0.00    0.00     292/292         monster_update [99]
+                0.00    0.00     292/292         camera_update [69]
+                0.00    0.00     292/292         player_update [101]
+-----------------------------------------------
+                0.00    0.00     292/292         main [2]
+[72]     0.0    0.00    0.00     292         game_frame_delay [72]
+-----------------------------------------------
+                0.00    0.00     292/292         gf2d_mouse_draw [79]
+[73]     0.0    0.00    0.00     292         gf2d_actor_draw [73]
+-----------------------------------------------
+                0.00    0.00     292/292         gf2d_font_draw_line_tag [75]
+[74]     0.0    0.00    0.00     292         gf2d_font_draw_line [74]
+                0.00    0.00     292/292         gf2d_font_image_get [77]
+                0.00    0.00     292/292         gf2d_sprite_draw_full [83]
+                0.00    0.00       1/1           gf2d_sprite_from_surface [195]
+                0.00    0.00       1/1           gf2d_font_image_new [190]
+-----------------------------------------------
+                0.00    0.00     292/292         main [2]
+[75]     0.0    0.00    0.00     292         gf2d_font_draw_line_tag [75]
+                0.00    0.00     292/292         gf2d_font_get_by_tag [76]
+                0.00    0.00     292/292         gf2d_font_draw_line [74]
+-----------------------------------------------
+                0.00    0.00     292/292         gf2d_font_draw_line_tag [75]
+[76]     0.0    0.00    0.00     292         gf2d_font_get_by_tag [76]
+-----------------------------------------------
+                0.00    0.00     292/292         gf2d_font_draw_line [74]
+[77]     0.0    0.00    0.00     292         gf2d_font_image_get [77]
+-----------------------------------------------
+                0.00    0.00     292/292         main [2]
+[78]     0.0    0.00    0.00     292         gf2d_font_update [78]
+-----------------------------------------------
+                0.00    0.00     292/292         main [2]
+[79]     0.0    0.00    0.00     292         gf2d_mouse_draw [79]
+                0.00    0.00     292/292         gf2d_actor_draw [73]
+-----------------------------------------------
+                0.00    0.00     292/292         camera_think [68]
+[80]     0.0    0.00    0.00     292         gf2d_mouse_get_position_from_center [80]
+                0.00    0.00     292/876         gf3d_vgraphics_get_view_extent_as_vector2d [62]
+                0.00    0.00     292/292         resetMouseToCenter [102]
+-----------------------------------------------
+                0.00    0.00     292/292         main [2]
+[81]     0.0    0.00    0.00     292         gf2d_mouse_update [81]
+-----------------------------------------------
+                0.00    0.00     292/292         gf2d_sprite_draw_full [83]
+[82]     0.0    0.00    0.00     292         gf2d_sprite_draw [82]
+                0.00    0.00     292/292         gf2d_sprite_get_uniform_buffer [84]
+                0.00    0.00     292/1460        gf3d_pipeline_queue_render [40]
+-----------------------------------------------
+                0.00    0.00     292/292         gf2d_font_draw_line [74]
+[83]     0.0    0.00    0.00     292         gf2d_sprite_draw_full [83]
+                0.00    0.00     292/292         gf2d_sprite_draw [82]
+-----------------------------------------------
+                0.00    0.00     292/292         gf2d_sprite_draw [82]
+[84]     0.0    0.00    0.00     292         gf2d_sprite_get_uniform_buffer [84]
+                0.00    0.00     292/876         gf3d_vgraphics_get_view_extent_as_vector2d [62]
+-----------------------------------------------
+                0.00    0.00     292/292         camera_update [69]
+[85]     0.0    0.00    0.00     292         gf3d_camera_look_at [85]
+                0.00    0.00     292/292         gf3d_camera_set_position [86]
+                0.00    0.00     292/292         gf3d_camera_set_rotation [87]
+-----------------------------------------------
+                0.00    0.00     292/292         gf3d_camera_look_at [85]
+[86]     0.0    0.00    0.00     292         gf3d_camera_set_position [86]
+-----------------------------------------------
+                0.00    0.00     292/292         gf3d_camera_look_at [85]
+[87]     0.0    0.00    0.00     292         gf3d_camera_set_rotation [87]
+-----------------------------------------------
+                0.00    0.00     292/292         main [2]
+[88]     0.0    0.00    0.00     292         gf3d_camera_update_view [88]
+                0.00    0.00     292/292         gf3d_vgraphics_set_view [96]
+-----------------------------------------------
+                0.00    0.00     292/292         gf3d_vgraphics_render_end [94]
+[89]     0.0    0.00    0.00     292         gf3d_command_pool_get_used_buffer_count [89]
+-----------------------------------------------
+                0.00    0.00     292/292         gf3d_vgraphics_render_end [94]
+[90]     0.0    0.00    0.00     292         gf3d_command_pool_get_used_buffers [90]
+-----------------------------------------------
+                0.00    0.00     292/292         gf3d_vgraphics_render_start [95]
+[91]     0.0    0.00    0.00     292         gf3d_pipeline_reset_all_pipes [91]
+                0.00    0.00     876/876         gf3d_pipeline_reset_frame [58]
+                0.00    0.00     292/3796        gf3d_vgraphics_get_current_buffer_frame [32]
+-----------------------------------------------
+                0.00    0.00     292/292         gf3d_vgraphics_render_end [94]
+[92]     0.0    0.00    0.00     292         gf3d_pipeline_submit_all_pipe_commands [92]
+                0.00    0.00     876/876         gf3_pipeline_update_ubos [52]
+                0.00    0.00     876/876         gf3d_pipeline_update_descriptor_sets [60]
+                0.00    0.00     876/876         gf3d_pipeline_render_all_drawcalls [57]
+                0.00    0.00     876/876         gf3d_pipeline_submit_commands [59]
+-----------------------------------------------
+                0.00    0.00     292/292         gf3d_vgraphics_render_start [95]
+[93]     0.0    0.00    0.00     292         gf3d_vgraphics_render_begin [93]
+                0.00    0.00     292/584         gf3d_swapchain_get [64]
+-----------------------------------------------
+                0.00    0.00     292/292         main [2]
+[94]     0.0    0.00    0.00     292         gf3d_vgraphics_render_end [94]
+                0.00    0.00     292/292         gf3d_pipeline_submit_all_pipe_commands [92]
+                0.00    0.00     292/584         gf3d_swapchain_get [64]
+                0.00    0.00     292/292         gf3d_command_pool_get_used_buffer_count [89]
+                0.00    0.00     292/292         gf3d_command_pool_get_used_buffers [90]
+                0.00    0.00     292/2100        gf3d_vqueues_get_graphics_queue [33]
+                0.00    0.00     292/292         gf3d_vqueues_get_present_queue [97]
+-----------------------------------------------
+                0.00    0.00     292/292         main [2]
+[95]     0.0    0.00    0.00     292         gf3d_vgraphics_render_start [95]
+                0.00    0.00     292/292         gf3d_vgraphics_render_begin [93]
+                0.00    0.00     292/292         gf3d_pipeline_reset_all_pipes [91]
+-----------------------------------------------
+                0.00    0.00     292/292         gf3d_camera_update_view [88]
+[96]     0.0    0.00    0.00     292         gf3d_vgraphics_set_view [96]
+-----------------------------------------------
+                0.00    0.00     292/292         gf3d_vgraphics_render_end [94]
+[97]     0.0    0.00    0.00     292         gf3d_vqueues_get_present_queue [97]
+-----------------------------------------------
+                0.00    0.00     292/292         entity_system_draw_all [70]
+[98]     0.0    0.00    0.00     292         monster_draw [98]
+                0.00    0.00     292/1168        entity_draw [43]
+-----------------------------------------------
+                0.00    0.00     292/292         entity_system_update_all [71]
+[99]     0.0    0.00    0.00     292         monster_update [99]
+-----------------------------------------------
+                0.00    0.00     292/292         entity_system_draw_all [70]
+[100]    0.0    0.00    0.00     292         player_draw [100]
+                0.00    0.00     292/1168        entity_draw [43]
+-----------------------------------------------
+                0.00    0.00     292/292         entity_system_update_all [71]
+[101]    0.0    0.00    0.00     292         player_update [101]
+-----------------------------------------------
+                0.00    0.00     292/292         gf2d_mouse_get_position_from_center [80]
+[102]    0.0    0.00    0.00     292         resetMouseToCenter [102]
+                0.00    0.00     292/876         gf3d_vgraphics_get_view_extent_as_vector2d [62]
+-----------------------------------------------
+                0.00    0.00     256/256         gf3d_texture_delete_all [184]
+[103]    0.0    0.00    0.00     256         gf3d_texture_delete [103]
+-----------------------------------------------
+                0.00    0.00       6/134         entity_free [122]
+                0.00    0.00     128/134         gf2d_sprite_delete [106]
+[104]    0.0    0.00    0.00     134         gf3d_texture_free [104]
+-----------------------------------------------
+                0.00    0.00     128/128         gf2d_actor_clear_all [188]
+[105]    0.0    0.00    0.00     128         gf2d_actor_delete [105]
+-----------------------------------------------
+                0.00    0.00     128/128         gf2d_sprite_manager_close [325]
+[106]    0.0    0.00    0.00     128         gf2d_sprite_delete [106]
+                0.00    0.00     128/134         gf3d_texture_free [104]
+-----------------------------------------------
+                0.00    0.00      64/64          gf3d_command_system_close [330]
+[107]    0.0    0.00    0.00      64         gf3d_command_free [107]
+-----------------------------------------------
+                0.00    0.00       1/53          gf3d_swapchain_find_Memory_type [222]
+                0.00    0.00       6/53          gf3d_pipeline_find_supported_format [130]
+                0.00    0.00      46/53          gf3d_vgraphics_find_memory_type [109]
+[108]    0.0    0.00    0.00      53         gf3d_vgraphics_get_default_physical_device [108]
+-----------------------------------------------
+                0.00    0.00       5/46          gf3d_texture_convert_surface [142]
+                0.00    0.00      41/46          gf3d_buffer_create [110]
+[109]    0.0    0.00    0.00      46         gf3d_vgraphics_find_memory_type [109]
+                0.00    0.00      46/53          gf3d_vgraphics_get_default_physical_device [108]
+-----------------------------------------------
+                0.00    0.00       2/41          gf2d_sprite_manager_init [197]
+                0.00    0.00       2/41          gf2d_sprite_create_vertex_buffer [193]
+                0.00    0.00       5/41          gf3d_texture_convert_surface [142]
+                0.00    0.00      10/41          gf3d_mesh_create_vertex_buffer_from_vertices [134]
+                0.00    0.00      10/41          gf3d_mesh_setup_face_buffers [138]
+                0.00    0.00      12/41          gf3d_uniform_buffer_list_new [176]
+[110]    0.0    0.00    0.00      41         gf3d_buffer_create [110]
+                0.00    0.00     164/767         gf3d_vgraphics_get_default_logical_device [63]
+                0.00    0.00      41/46          gf3d_vgraphics_find_memory_type [109]
+-----------------------------------------------
+                0.00    0.00      16/16          gf3d_pipeline_close [361]
+[111]    0.0    0.00    0.00      16         gf3d_pipeline_free [111]
+                0.00    0.00       3/3           gf3d_uniform_buffer_list_free [175]
+-----------------------------------------------
+                0.00    0.00       1/12          gf2d_sprite_manager_init [197]
+                0.00    0.00       1/12          gf2d_sprite_create_vertex_buffer [193]
+                0.00    0.00       5/12          gf3d_mesh_create_vertex_buffer_from_vertices [134]
+                0.00    0.00       5/12          gf3d_mesh_setup_face_buffers [138]
+[112]    0.0    0.00    0.00      12         gf3d_buffer_copy [112]
+                0.00    0.00      24/1792        gf3d_vgraphics_get_graphics_command_pool [35]
+                0.00    0.00      12/904         gf3d_command_begin_single_time [50]
+                0.00    0.00      12/904         gf3d_command_end_single_time [51]
+-----------------------------------------------
+                0.00    0.00       6/12          gf3d_pipeline_create_basic_descriptor_pool_from_config [168]
+                0.00    0.00       6/12          gf3d_pipeline_create_basic_descriptor_set_layout_from_config [169]
+[113]    0.0    0.00    0.00      12         gf3d_config_descriptor_type_from_str [113]
+-----------------------------------------------
+                0.00    0.00      12/12          gf3d_config_attachment_description [125]
+[114]    0.0    0.00    0.00      12         gf3d_config_image_layer_from_str [114]
+-----------------------------------------------
+                0.00    0.00      12/12          gf3d_config_pipeline_color_blend_attachment [158]
+[115]    0.0    0.00    0.00      12         gf3d_config_parse_blend_factor [115]
+-----------------------------------------------
+                0.00    0.00      12/12          gf3d_config_color_component_flag_bits [151]
+[116]    0.0    0.00    0.00      12         gf3d_config_parse_color_component_flag_bits [116]
+-----------------------------------------------
+                0.00    0.00       1/11          gf3d_swapchain_create_depth_image [219]
+                0.00    0.00      10/11          gf3d_texture_convert_surface [142]
+[117]    0.0    0.00    0.00      11         gf3d_swapchain_transition_image_layout [117]
+                0.00    0.00      11/1792        gf3d_vgraphics_get_graphics_command_pool [35]
+                0.00    0.00      11/904         gf3d_command_begin_single_time [50]
+                0.00    0.00      11/904         gf3d_command_end_single_time [51]
+                0.00    0.00       1/1           gf3d_swapchain_has_stencil_component [224]
+-----------------------------------------------
+                0.00    0.00       3/9           gf3d_config_pipline_multisample_state_create_info [159]
+                0.00    0.00       6/9           gf3d_config_attachment_description [125]
+[118]    0.0    0.00    0.00       9         gf3d_config_parse_sample_count_bits [118]
+-----------------------------------------------
+                0.00    0.00       4/9           gf3d_swapchain_create [218]
+                0.00    0.00       5/9           gf3d_texture_convert_surface [142]
+[119]    0.0    0.00    0.00       9         gf3d_vgraphics_create_image_view [119]
+-----------------------------------------------
+                0.00    0.00       8/8           gf2d_fonts_load_json [192]
+[120]    0.0    0.00    0.00       8         gf2d_font_type_from_text [120]
+-----------------------------------------------
+                0.00    0.00       7/7           gf3d_config_shader_stage_flags [127]
+[121]    0.0    0.00    0.00       7         gf3d_config_shader_stage_flag_from_str [121]
+-----------------------------------------------
+                0.00    0.00       6/6           entity_system_close [253]
+[122]    0.0    0.00    0.00       6         entity_free [122]
+                0.00    0.00       6/6           gf3d_mesh_free [128]
+                0.00    0.00       6/134         gf3d_texture_free [104]
+-----------------------------------------------
+                0.00    0.00       1/6           spawn_monster [30]
+                0.00    0.00       1/6           spawn_player [31]
+                0.00    0.00       1/6           spawn_camera [242]
+                0.00    0.00       3/6           spawn_world [28]
+[123]    0.0    0.00    0.00       6         entity_new [123]
+-----------------------------------------------
+                0.00    0.00       6/6           gf3d_config_access_flag_bits [150]
+[124]    0.0    0.00    0.00       6         gf3d_config_access_flag_bits_from_str [124]
+-----------------------------------------------
+                0.00    0.00       6/6           gf3d_pipeline_render_pass_create [173]
+[125]    0.0    0.00    0.00       6         gf3d_config_attachment_description [125]
+                0.00    0.00      12/12          gf3d_config_image_layer_from_str [114]
+                0.00    0.00       6/9           gf3d_config_parse_sample_count_bits [118]
+-----------------------------------------------
+                0.00    0.00       6/6           gf3d_config_subpass_dependency [162]
+[126]    0.0    0.00    0.00       6         gf3d_config_pipeline_stage_flags_from_str [126]
+-----------------------------------------------
+                0.00    0.00       6/6           gf3d_pipeline_create_basic_descriptor_set_layout_from_config [169]
+[127]    0.0    0.00    0.00       6         gf3d_config_shader_stage_flags [127]
+                0.00    0.00       7/7           gf3d_config_shader_stage_flag_from_str [121]
+-----------------------------------------------
+                0.00    0.00       6/6           entity_free [122]
+[128]    0.0    0.00    0.00       6         gf3d_mesh_free [128]
+-----------------------------------------------
+                0.00    0.00       3/6           gf3d_pipeline_render_pass_create [173]
+                0.00    0.00       3/6           gf3d_swapchain_create_depth_image [219]
+[129]    0.0    0.00    0.00       6         gf3d_pipeline_find_depth_format [129]
+                0.00    0.00       6/6           gf3d_pipeline_find_supported_format [130]
+-----------------------------------------------
+                0.00    0.00       6/6           gf3d_pipeline_find_depth_format [129]
+[130]    0.0    0.00    0.00       6         gf3d_pipeline_find_supported_format [130]
+                0.00    0.00       6/53          gf3d_vgraphics_get_default_physical_device [108]
+-----------------------------------------------
+                0.00    0.00       6/6           gf3d_pipeline_create_from_config [171]
+[131]    0.0    0.00    0.00       6         gf3d_shaders_create_module [131]
+-----------------------------------------------
+                0.00    0.00       6/6           gf3d_pipeline_create_from_config [171]
+[132]    0.0    0.00    0.00       6         gf3d_shaders_load_data [132]
+-----------------------------------------------
+                0.00    0.00       1/6           gf3d_pipeline_init [215]
+                0.00    0.00       2/6           gf3d_vgraphics_init [227]
+                0.00    0.00       3/6           gf3d_pipeline_create_from_config [171]
+[133]    0.0    0.00    0.00       6         gf3d_swapchain_get_swap_image_count [133]
+-----------------------------------------------
+                0.00    0.00       5/5           gf3d_mesh_load [22]
+[134]    0.0    0.00    0.00       5         gf3d_mesh_create_vertex_buffer_from_vertices [134]
+                0.00    0.00      10/41          gf3d_buffer_create [110]
+                0.00    0.00       5/767         gf3d_vgraphics_get_default_logical_device [63]
+                0.00    0.00       5/12          gf3d_buffer_copy [112]
+-----------------------------------------------
+                0.00    0.00       5/5           gf3d_mesh_load [22]
+[135]    0.0    0.00    0.00       5         gf3d_mesh_get_by_filename [135]
+-----------------------------------------------
+                0.00    0.00       5/5           gf3d_mesh_load [22]
+[136]    0.0    0.00    0.00       5         gf3d_mesh_new [136]
+-----------------------------------------------
+                0.00    0.00       5/5           gf3d_mesh_load [22]
+[137]    0.0    0.00    0.00       5         gf3d_mesh_primitive_new [137]
+-----------------------------------------------
+                0.00    0.00       5/5           gf3d_mesh_load [22]
+[138]    0.0    0.00    0.00       5         gf3d_mesh_setup_face_buffers [138]
+                0.00    0.00      10/41          gf3d_buffer_create [110]
+                0.00    0.00       5/767         gf3d_vgraphics_get_default_logical_device [63]
+                0.00    0.00       5/12          gf3d_buffer_copy [112]
+-----------------------------------------------
+                0.00    0.00       5/5           gf3d_obj_load_from_file [23]
+[139]    0.0    0.00    0.00       5         gf3d_obj_get_bounds [139]
+-----------------------------------------------
+                0.00    0.00       5/5           gf3d_obj_load_from_file [23]
+[140]    0.0    0.00    0.00       5         gf3d_obj_get_counts_from_file [140]
+-----------------------------------------------
+                0.00    0.00       5/5           gf3d_obj_load_from_file [23]
+[141]    0.0    0.00    0.00       5         gf3d_obj_load_reorg [141]
+-----------------------------------------------
+                0.00    0.00       1/5           gf2d_sprite_from_surface [195]
+                0.00    0.00       4/5           gf3d_texture_load [146]
+[142]    0.0    0.00    0.00       5         gf3d_texture_convert_surface [142]
+                0.00    0.00      10/11          gf3d_swapchain_transition_image_layout [117]
+                0.00    0.00       5/5           gf3d_texture_new [147]
+                0.00    0.00       5/5           gf3d_vgraphics_screen_convert [148]
+                0.00    0.00       5/41          gf3d_buffer_create [110]
+                0.00    0.00       5/46          gf3d_vgraphics_find_memory_type [109]
+                0.00    0.00       5/5           gf3d_texture_copy_buffer_to_image [143]
+                0.00    0.00       5/9           gf3d_vgraphics_create_image_view [119]
+                0.00    0.00       5/5           gf3d_texture_create_sampler [144]
+-----------------------------------------------
+                0.00    0.00       5/5           gf3d_texture_convert_surface [142]
+[143]    0.0    0.00    0.00       5         gf3d_texture_copy_buffer_to_image [143]
+                0.00    0.00       5/1792        gf3d_vgraphics_get_graphics_command_pool [35]
+                0.00    0.00       5/904         gf3d_command_begin_single_time [50]
+                0.00    0.00       5/904         gf3d_command_end_single_time [51]
+-----------------------------------------------
+                0.00    0.00       5/5           gf3d_texture_convert_surface [142]
+[144]    0.0    0.00    0.00       5         gf3d_texture_create_sampler [144]
+-----------------------------------------------
+                0.00    0.00       5/5           gf3d_texture_load [146]
+[145]    0.0    0.00    0.00       5         gf3d_texture_get_by_filename [145]
+-----------------------------------------------
+                0.00    0.00       1/5           gf3d_mesh_init [214]
+                0.00    0.00       1/5           spawn_monster [30]
+                0.00    0.00       1/5           spawn_player [31]
+                0.00    0.00       2/5           spawn_world [28]
+[146]    0.0    0.00    0.00       5         gf3d_texture_load [146]
+                0.00    0.00       5/5           gf3d_texture_get_by_filename [145]
+                0.00    0.00       4/5           gf3d_texture_convert_surface [142]
+-----------------------------------------------
+                0.00    0.00       5/5           gf3d_texture_convert_surface [142]
+[147]    0.0    0.00    0.00       5         gf3d_texture_new [147]
+-----------------------------------------------
+                0.00    0.00       5/5           gf3d_texture_convert_surface [142]
+[148]    0.0    0.00    0.00       5         gf3d_vgraphics_screen_convert [148]
+-----------------------------------------------
+                0.00    0.00       4/4           gf3d_swapchain_setup_frame_buffers [226]
+[149]    0.0    0.00    0.00       4         gf3d_swapchain_create_frame_buffer [149]
+-----------------------------------------------
+                0.00    0.00       3/3           gf3d_config_subpass_dependency [162]
+[150]    0.0    0.00    0.00       3         gf3d_config_access_flag_bits [150]
+                0.00    0.00       6/6           gf3d_config_access_flag_bits_from_str [124]
+-----------------------------------------------
+                0.00    0.00       3/3           gf3d_config_pipeline_color_blend_attachment [158]
+[151]    0.0    0.00    0.00       3         gf3d_config_color_component_flag_bits [151]
+                0.00    0.00      12/12          gf3d_config_parse_color_component_flag_bits [116]
+-----------------------------------------------
+                0.00    0.00       3/3           gf3d_pipelin_depth_stencil_create_info_from_json [166]
+[152]    0.0    0.00    0.00       3         gf3d_config_compar_op_flag_from_str [152]
+-----------------------------------------------
+                0.00    0.00       3/3           gf3d_config_pipeline_color_blend_attachment [158]
+[153]    0.0    0.00    0.00       3         gf3d_config_parse_blend_op [153]
+-----------------------------------------------
+                0.00    0.00       3/3           gf3d_config_pipline_rasterization_state_create_info [160]
+[154]    0.0    0.00    0.00       3         gf3d_config_parse_cull_mode [154]
+-----------------------------------------------
+                0.00    0.00       3/3           gf3d_config_pipline_rasterization_state_create_info [160]
+[155]    0.0    0.00    0.00       3         gf3d_config_parse_front_face [155]
+-----------------------------------------------
+                0.00    0.00       3/3           gf3d_config_pipline_rasterization_state_create_info [160]
+[156]    0.0    0.00    0.00       3         gf3d_config_parse_polygon_mode [156]
+-----------------------------------------------
+                0.00    0.00       3/3           gf3d_pipeline_render_pass_create [173]
+[157]    0.0    0.00    0.00       3         gf3d_config_pipeline_bindpoint_from_str [157]
+-----------------------------------------------
+                0.00    0.00       3/3           gf3d_pipeline_create_from_config [171]
+[158]    0.0    0.00    0.00       3         gf3d_config_pipeline_color_blend_attachment [158]
+                0.00    0.00      12/12          gf3d_config_parse_blend_factor [115]
+                0.00    0.00       3/3           gf3d_config_color_component_flag_bits [151]
+                0.00    0.00       3/3           gf3d_config_parse_blend_op [153]
+-----------------------------------------------
+                0.00    0.00       3/3           gf3d_pipeline_create_from_config [171]
+[159]    0.0    0.00    0.00       3         gf3d_config_pipline_multisample_state_create_info [159]
+                0.00    0.00       3/9           gf3d_config_parse_sample_count_bits [118]
+-----------------------------------------------
+                0.00    0.00       3/3           gf3d_pipeline_create_from_config [171]
+[160]    0.0    0.00    0.00       3         gf3d_config_pipline_rasterization_state_create_info [160]
+                0.00    0.00       3/3           gf3d_config_parse_polygon_mode [156]
+                0.00    0.00       3/3           gf3d_config_parse_cull_mode [154]
+                0.00    0.00       3/3           gf3d_config_parse_front_face [155]
+-----------------------------------------------
+                0.00    0.00       3/3           gf3d_pipeline_create_from_config [171]
+[161]    0.0    0.00    0.00       3         gf3d_config_primitive_topology_from_str [161]
+-----------------------------------------------
+                0.00    0.00       3/3           gf3d_pipeline_render_pass_create [173]
+[162]    0.0    0.00    0.00       3         gf3d_config_subpass_dependency [162]
+                0.00    0.00       6/6           gf3d_config_pipeline_stage_flags_from_str [126]
+                0.00    0.00       3/3           gf3d_config_access_flag_bits [150]
+-----------------------------------------------
+                0.00    0.00       3/3           gf3d_extensions_enable [164]
+[163]    0.0    0.00    0.00       3         gf3d_extensions_check_available [163]
+-----------------------------------------------
+                0.00    0.00       1/3           gf3d_extensions_config [181]
+                0.00    0.00       2/3           gf3d_vgraphics_setup [229]
+[164]    0.0    0.00    0.00       3         gf3d_extensions_enable [164]
+                0.00    0.00       3/3           gf3d_extensions_check_available [163]
+-----------------------------------------------
+                0.00    0.00       3/3           gf3d_mesh_init [214]
+[165]    0.0    0.00    0.00       3         gf3d_mesh_get_attribute_descriptions [165]
+-----------------------------------------------
+                0.00    0.00       3/3           gf3d_pipeline_create_from_config [171]
+[166]    0.0    0.00    0.00       3         gf3d_pipelin_depth_stencil_create_info_from_json [166]
+                0.00    0.00       3/3           gf3d_config_compar_op_flag_from_str [152]
+-----------------------------------------------
+                0.00    0.00       3/3           gf3d_pipeline_create_basic_descriptor_pool_from_config [168]
+[167]    0.0    0.00    0.00       3         gf3d_pipeline_create_basic_descriptor_pool [167]
+-----------------------------------------------
+                0.00    0.00       3/3           gf3d_pipeline_create_from_config [171]
+[168]    0.0    0.00    0.00       3         gf3d_pipeline_create_basic_descriptor_pool_from_config [168]
+                0.00    0.00       6/12          gf3d_config_descriptor_type_from_str [113]
+                0.00    0.00       3/3           gf3d_pipeline_create_basic_descriptor_pool [167]
+-----------------------------------------------
+                0.00    0.00       3/3           gf3d_pipeline_create_from_config [171]
+[169]    0.0    0.00    0.00       3         gf3d_pipeline_create_basic_descriptor_set_layout_from_config [169]
+                0.00    0.00       6/12          gf3d_config_descriptor_type_from_str [113]
+                0.00    0.00       6/6           gf3d_config_shader_stage_flags [127]
+-----------------------------------------------
+                0.00    0.00       3/3           gf3d_pipeline_create_from_config [171]
+[170]    0.0    0.00    0.00       3         gf3d_pipeline_create_descriptor_sets [170]
+-----------------------------------------------
+                0.00    0.00       1/3           gf2d_sprite_manager_init [197]
+                0.00    0.00       2/3           gf3d_mesh_init [214]
+[171]    0.0    0.00    0.00       3         gf3d_pipeline_create_from_config [171]
+                0.00    0.00       6/6           gf3d_shaders_load_data [132]
+                0.00    0.00       6/6           gf3d_shaders_create_module [131]
+                0.00    0.00       3/3           gf3d_pipeline_new [172]
+                0.00    0.00       3/3           gf3d_pipelin_depth_stencil_create_info_from_json [166]
+                0.00    0.00       3/3           gf3d_config_primitive_topology_from_str [161]
+                0.00    0.00       3/3           gf3d_config_pipline_rasterization_state_create_info [160]
+                0.00    0.00       3/3           gf3d_config_pipline_multisample_state_create_info [159]
+                0.00    0.00       3/3           gf3d_config_pipeline_color_blend_attachment [158]
+                0.00    0.00       3/3           gf3d_pipeline_create_basic_descriptor_pool_from_config [168]
+                0.00    0.00       3/3           gf3d_pipeline_create_basic_descriptor_set_layout_from_config [169]
+                0.00    0.00       3/3           gf3d_pipeline_create_descriptor_sets [170]
+                0.00    0.00       3/3           gf3d_pipeline_render_pass_create [173]
+                0.00    0.00       3/6           gf3d_swapchain_get_swap_image_count [133]
+                0.00    0.00       3/3           gf3d_uniform_buffer_list_new [176]
+-----------------------------------------------
+                0.00    0.00       3/3           gf3d_pipeline_create_from_config [171]
+[172]    0.0    0.00    0.00       3         gf3d_pipeline_new [172]
+-----------------------------------------------
+                0.00    0.00       3/3           gf3d_pipeline_create_from_config [171]
+[173]    0.0    0.00    0.00       3         gf3d_pipeline_render_pass_create [173]
+                0.00    0.00       6/6           gf3d_config_attachment_description [125]
+                0.00    0.00       3/6           gf3d_pipeline_find_depth_format [129]
+                0.00    0.00       3/3           gf3d_swapchain_get_format [174]
+                0.00    0.00       3/3           gf3d_config_subpass_dependency [162]
+                0.00    0.00       3/3           gf3d_config_pipeline_bindpoint_from_str [157]
+-----------------------------------------------
+                0.00    0.00       3/3           gf3d_pipeline_render_pass_create [173]
+[174]    0.0    0.00    0.00       3         gf3d_swapchain_get_format [174]
+-----------------------------------------------
+                0.00    0.00       3/3           gf3d_pipeline_free [111]
+[175]    0.0    0.00    0.00       3         gf3d_uniform_buffer_list_free [175]
+-----------------------------------------------
+                0.00    0.00       3/3           gf3d_pipeline_create_from_config [171]
+[176]    0.0    0.00    0.00       3         gf3d_uniform_buffer_list_new [176]
+                0.00    0.00      12/41          gf3d_buffer_create [110]
+-----------------------------------------------
+                0.00    0.00       1/3           gf2d_sprite_manager_init [197]
+                0.00    0.00       2/3           gf3d_mesh_init [214]
+[177]    0.0    0.00    0.00       3         gf3d_vgraphics_get_view_extent [177]
+                0.00    0.00       3/1755        gf3d_swapchain_get_extent [36]
+-----------------------------------------------
+                0.00    0.00       2/2           gf2d_sprite_manager_init [197]
+[178]    0.0    0.00    0.00       2         gf2d_sprite_get_attribute_descriptions [178]
+-----------------------------------------------
+                0.00    0.00       2/2           gf3d_devices_enumerate [208]
+[179]    0.0    0.00    0.00       2         gf3d_device_get_info [179]
+-----------------------------------------------
+                0.00    0.00       1/2           gf3d_device_create_logic_device [203]
+                0.00    0.00       1/2           gf3d_vgraphics_setup [229]
+[180]    0.0    0.00    0.00       2         gf3d_devices_get_best_device [180]
+-----------------------------------------------
+                0.00    0.00       1/2           gf3d_extensions_device_init [209]
+                0.00    0.00       1/2           gf3d_extensions_instance_init [212]
+[181]    0.0    0.00    0.00       2         gf3d_extensions_config [181]
+                0.00    0.00       1/3           gf3d_extensions_enable [164]
+-----------------------------------------------
+                0.00    0.00       2/2           gf3d_mesh_init [214]
+[182]    0.0    0.00    0.00       2         gf3d_mesh_get_bind_description [182]
+-----------------------------------------------
+                0.00    0.00       1/2           gf2d_sprite_manager_init [197]
+                0.00    0.00       1/2           gf3d_mesh_init [214]
+[183]    0.0    0.00    0.00       2         gf3d_swapchain_get_chain_length [183]
+-----------------------------------------------
+                0.00    0.00       2/2           gf3d_texture_close [368]
+[184]    0.0    0.00    0.00       2         gf3d_texture_delete_all [184]
+                0.00    0.00     256/256         gf3d_texture_delete [103]
+-----------------------------------------------
+                0.00    0.00       1/2           main [2]
+                0.00    0.00       1/2           gf3d_vgraphics_init [227]
+[185]    0.0    0.00    0.00       2         gf3d_texture_init [185]
+                0.00    0.00       2/767         gf3d_vgraphics_get_default_logical_device [63]
+-----------------------------------------------
+                0.00    0.00       1/2           gf3d_command_graphics_pool_setup [199]
+                0.00    0.00       1/2           gf3d_swapchain_create [218]
+[186]    0.0    0.00    0.00       2         gf3d_vqueues_get_graphics_queue_family [186]
+-----------------------------------------------
+                0.00    0.00       1/1           main [2]
+[187]    0.0    0.00    0.00       1         entity_system_init [187]
+-----------------------------------------------
+                0.00    0.00       1/1           gf2d_actor_close [263]
+[188]    0.0    0.00    0.00       1         gf2d_actor_clear_all [188]
+                0.00    0.00     128/128         gf2d_actor_delete [105]
+-----------------------------------------------
+                0.00    0.00       1/1           main [2]
+[189]    0.0    0.00    0.00       1         gf2d_actor_init [189]
+-----------------------------------------------
+                0.00    0.00       1/1           gf2d_font_draw_line [74]
+[190]    0.0    0.00    0.00       1         gf2d_font_image_new [190]
+-----------------------------------------------
+                0.00    0.00       1/1           main [2]
+[191]    0.0    0.00    0.00       1         gf2d_font_init [191]
+                0.00    0.00       1/1           gf2d_fonts_load_json [192]
+-----------------------------------------------
+                0.00    0.00       1/1           gf2d_font_init [191]
+[192]    0.0    0.00    0.00       1         gf2d_fonts_load_json [192]
+                0.00    0.00       8/8           gf2d_font_type_from_text [120]
+-----------------------------------------------
+                0.00    0.00       1/1           gf2d_sprite_from_surface [195]
+[193]    0.0    0.00    0.00       1         gf2d_sprite_create_vertex_buffer [193]
+                0.00    0.00       2/41          gf3d_buffer_create [110]
+                0.00    0.00       1/12          gf3d_buffer_copy [112]
+-----------------------------------------------
+                0.00    0.00       1/1           gf2d_font_close [292]
+[194]    0.0    0.00    0.00       1         gf2d_sprite_free [194]
+-----------------------------------------------
+                0.00    0.00       1/1           gf2d_font_draw_line [74]
+[195]    0.0    0.00    0.00       1         gf2d_sprite_from_surface [195]
+                0.00    0.00       1/1           gf2d_sprite_new [198]
+                0.00    0.00       1/5           gf3d_texture_convert_surface [142]
+                0.00    0.00       1/1           gf2d_sprite_create_vertex_buffer [193]
+-----------------------------------------------
+                0.00    0.00       1/1           gf2d_sprite_manager_init [197]
+[196]    0.0    0.00    0.00       1         gf2d_sprite_get_bind_description [196]
+-----------------------------------------------
+                0.00    0.00       1/1           main [2]
+[197]    0.0    0.00    0.00       1         gf2d_sprite_manager_init [197]
+                0.00    0.00       2/767         gf3d_vgraphics_get_default_logical_device [63]
+                0.00    0.00       2/41          gf3d_buffer_create [110]
+                0.00    0.00       2/2           gf2d_sprite_get_attribute_descriptions [178]
+                0.00    0.00       1/2           gf3d_swapchain_get_chain_length [183]
+                0.00    0.00       1/12          gf3d_buffer_copy [112]
+                0.00    0.00       1/3           gf3d_vgraphics_get_view_extent [177]
+                0.00    0.00       1/1           gf2d_sprite_get_bind_description [196]
+                0.00    0.00       1/3           gf3d_pipeline_create_from_config [171]
+-----------------------------------------------
+                0.00    0.00       1/1           gf2d_sprite_from_surface [195]
+[198]    0.0    0.00    0.00       1         gf2d_sprite_new [198]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_vgraphics_init [227]
+[199]    0.0    0.00    0.00       1         gf3d_command_graphics_pool_setup [199]
+                0.00    0.00       1/1           gf3d_command_pool_new [200]
+                0.00    0.00       1/2           gf3d_vqueues_get_graphics_queue_family [186]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_command_graphics_pool_setup [199]
+[200]    0.0    0.00    0.00       1         gf3d_command_pool_new [200]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_vgraphics_init [227]
+[201]    0.0    0.00    0.00       1         gf3d_command_system_init [201]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_vgraphics_close [383]
+[202]    0.0    0.00    0.00       1         gf3d_debug_close [202]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_device_manager_init [207]
+[203]    0.0    0.00    0.00       1         gf3d_device_create_logic_device [203]
+                0.00    0.00       1/1           gf3d_device_get_logical_device_info [205]
+                0.00    0.00       1/2           gf3d_devices_get_best_device [180]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_vgraphics_setup [229]
+[204]    0.0    0.00    0.00       1         gf3d_device_get [204]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_device_create_logic_device [203]
+[205]    0.0    0.00    0.00       1         gf3d_device_get_logical_device_info [205]
+                0.00    0.00       1/1           gf3d_vqueues_get_queue_create_info [236]
+                0.00    0.00       1/1           gf3d_extensions_get_device_enabled_names [210]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_device_manager_init [207]
+[206]    0.0    0.00    0.00       1         gf3d_device_manager_determine_best [206]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_vgraphics_setup [229]
+[207]    0.0    0.00    0.00       1         gf3d_device_manager_init [207]
+                0.00    0.00       1/1           gf3d_devices_enumerate [208]
+                0.00    0.00       1/1           gf3d_device_manager_determine_best [206]
+                0.00    0.00       1/1           gf3d_vqueues_init [238]
+                0.00    0.00       1/1           gf3d_extensions_device_init [209]
+                0.00    0.00       1/1           gf3d_device_create_logic_device [203]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_device_manager_init [207]
+[208]    0.0    0.00    0.00       1         gf3d_devices_enumerate [208]
+                0.00    0.00       2/2           gf3d_device_get_info [179]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_device_manager_init [207]
+[209]    0.0    0.00    0.00       1         gf3d_extensions_device_init [209]
+                0.00    0.00       1/2           gf3d_extensions_config [181]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_device_get_logical_device_info [205]
+[210]    0.0    0.00    0.00       1         gf3d_extensions_get_device_enabled_names [210]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_vgraphics_setup [229]
+[211]    0.0    0.00    0.00       1         gf3d_extensions_get_instance_enabled_names [211]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_vgraphics_setup [229]
+[212]    0.0    0.00    0.00       1         gf3d_extensions_instance_init [212]
+                0.00    0.00       1/2           gf3d_extensions_config [181]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_vgraphics_init [227]
+[213]    0.0    0.00    0.00       1         gf3d_mesh_get_pipeline [213]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_vgraphics_init [227]
+[214]    0.0    0.00    0.00       1         gf3d_mesh_init [214]
+                0.00    0.00       3/3           gf3d_mesh_get_attribute_descriptions [165]
+                0.00    0.00       3/767         gf3d_vgraphics_get_default_logical_device [63]
+                0.00    0.00       2/3           gf3d_vgraphics_get_view_extent [177]
+                0.00    0.00       2/2           gf3d_mesh_get_bind_description [182]
+                0.00    0.00       2/3           gf3d_pipeline_create_from_config [171]
+                0.00    0.00       1/2           gf3d_swapchain_get_chain_length [183]
+                0.00    0.00       1/5           gf3d_texture_load [146]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_vgraphics_init [227]
+[215]    0.0    0.00    0.00       1         gf3d_pipeline_init [215]
+                0.00    0.00       1/6           gf3d_swapchain_get_swap_image_count [133]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_swapchain_init [225]
+[216]    0.0    0.00    0.00       1         gf3d_swapchain_choose_format [216]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_swapchain_init [225]
+[217]    0.0    0.00    0.00       1         gf3d_swapchain_configure_extent [217]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_swapchain_init [225]
+[218]    0.0    0.00    0.00       1         gf3d_swapchain_create [218]
+                0.00    0.00       4/9           gf3d_vgraphics_create_image_view [119]
+                0.00    0.00       1/2           gf3d_vqueues_get_graphics_queue_family [186]
+                0.00    0.00       1/1           gf3d_vqueues_get_present_queue_family [234]
+                0.00    0.00       1/1           gf3d_vqueues_get_transfer_queue_family [237]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_vgraphics_init [227]
+[219]    0.0    0.00    0.00       1         gf3d_swapchain_create_depth_image [219]
+                0.00    0.00       3/6           gf3d_pipeline_find_depth_format [129]
+                0.00    0.00       1/1           gf3d_swapchain_create_image [220]
+                0.00    0.00       1/1           gf3d_swapchain_create_image_view [221]
+                0.00    0.00       1/11          gf3d_swapchain_transition_image_layout [117]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_swapchain_create_depth_image [219]
+[220]    0.0    0.00    0.00       1         gf3d_swapchain_create_image [220]
+                0.00    0.00       1/1           gf3d_swapchain_find_Memory_type [222]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_swapchain_create_depth_image [219]
+[221]    0.0    0.00    0.00       1         gf3d_swapchain_create_image_view [221]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_swapchain_create_image [220]
+[222]    0.0    0.00    0.00       1         gf3d_swapchain_find_Memory_type [222]
+                0.00    0.00       1/53          gf3d_vgraphics_get_default_physical_device [108]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_swapchain_init [225]
+[223]    0.0    0.00    0.00       1         gf3d_swapchain_get_presentation_mode [223]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_swapchain_transition_image_layout [117]
+[224]    0.0    0.00    0.00       1         gf3d_swapchain_has_stencil_component [224]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_vgraphics_init [227]
+[225]    0.0    0.00    0.00       1         gf3d_swapchain_init [225]
+                0.00    0.00       1/1           gf3d_swapchain_choose_format [216]
+                0.00    0.00       1/1           gf3d_swapchain_get_presentation_mode [223]
+                0.00    0.00       1/1           gf3d_swapchain_configure_extent [217]
+                0.00    0.00       1/1           gf3d_swapchain_create [218]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_vgraphics_init [227]
+[226]    0.0    0.00    0.00       1         gf3d_swapchain_setup_frame_buffers [226]
+                0.00    0.00       4/4           gf3d_swapchain_create_frame_buffer [149]
+-----------------------------------------------
+                0.00    0.00       1/1           main [2]
+[227]    0.0    0.00    0.00       1         gf3d_vgraphics_init [227]
+                0.00    0.00       2/6           gf3d_swapchain_get_swap_image_count [133]
+                0.00    0.00       1/1           gf3d_vgraphics_setup [229]
+                0.00    0.00       1/767         gf3d_vgraphics_get_default_logical_device [63]
+                0.00    0.00       1/1           gf3d_vqueues_setup_device_queues [239]
+                0.00    0.00       1/1           gf3d_swapchain_init [225]
+                0.00    0.00       1/1           gf3d_pipeline_init [215]
+                0.00    0.00       1/2           gf3d_texture_init [185]
+                0.00    0.00       1/1           gf3d_command_system_init [201]
+                0.00    0.00       1/1           gf3d_command_graphics_pool_setup [199]
+                0.00    0.00       1/1           gf3d_mesh_init [214]
+                0.00    0.00       1/1           gf3d_mesh_get_pipeline [213]
+                0.00    0.00       1/1           gf3d_swapchain_setup_frame_buffers [226]
+                0.00    0.00       1/1           gf3d_swapchain_create_depth_image [219]
+                0.00    0.00       1/1           gf3d_vgraphics_semaphores_create [228]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_vgraphics_init [227]
+[228]    0.0    0.00    0.00       1         gf3d_vgraphics_semaphores_create [228]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_vgraphics_init [227]
+[229]    0.0    0.00    0.00       1         gf3d_vgraphics_setup [229]
+                0.00    0.00       2/3           gf3d_extensions_enable [164]
+                0.00    0.00       1/1           gf3d_extensions_instance_init [212]
+                0.00    0.00       1/1           gf3d_extensions_get_instance_enabled_names [211]
+                0.00    0.00       1/1           gf3d_device_manager_init [207]
+                0.00    0.00       1/2           gf3d_devices_get_best_device [180]
+                0.00    0.00       1/1           gf3d_device_get [204]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_vqueues_init [238]
+[230]    0.0    0.00    0.00       1         gf3d_vqueues_choose_graphics_family [230]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_vqueues_init [238]
+[231]    0.0    0.00    0.00       1         gf3d_vqueues_choose_present_family [231]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_vqueues_init [238]
+[232]    0.0    0.00    0.00       1         gf3d_vqueues_choose_transfer_family [232]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_vqueues_init [238]
+[233]    0.0    0.00    0.00       1         gf3d_vqueues_get_graphics_queue_info [233]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_swapchain_create [218]
+[234]    0.0    0.00    0.00       1         gf3d_vqueues_get_present_queue_family [234]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_vqueues_init [238]
+[235]    0.0    0.00    0.00       1         gf3d_vqueues_get_present_queue_info [235]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_device_get_logical_device_info [205]
+[236]    0.0    0.00    0.00       1         gf3d_vqueues_get_queue_create_info [236]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_swapchain_create [218]
+[237]    0.0    0.00    0.00       1         gf3d_vqueues_get_transfer_queue_family [237]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_device_manager_init [207]
+[238]    0.0    0.00    0.00       1         gf3d_vqueues_init [238]
+                0.00    0.00       1/1           gf3d_vqueues_choose_graphics_family [230]
+                0.00    0.00       1/1           gf3d_vqueues_choose_transfer_family [232]
+                0.00    0.00       1/1           gf3d_vqueues_choose_present_family [231]
+                0.00    0.00       1/1           gf3d_vqueues_get_graphics_queue_info [233]
+                0.00    0.00       1/1           gf3d_vqueues_get_present_queue_info [235]
+-----------------------------------------------
+                0.00    0.00       1/1           gf3d_vgraphics_init [227]
+[239]    0.0    0.00    0.00       1         gf3d_vqueues_setup_device_queues [239]
+-----------------------------------------------
+                0.00    0.00       1/1           main [2]
+[240]    0.0    0.00    0.00       1         monsters_init [240]
+-----------------------------------------------
+                0.00    0.00       1/1           main [2]
+[241]    0.0    0.00    0.00       1         parse_arguments [241]
+-----------------------------------------------
+                0.00    0.00       1/1           main [2]
+[242]    0.0    0.00    0.00       1         spawn_camera [242]
+                0.00    0.00       1/6           entity_new [123]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2024 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [29] _init                 [162] gf3d_config_subpass_dependency [117] gf3d_swapchain_transition_image_layout
+  [68] camera_think          [202] gf3d_debug_close      [142] gf3d_texture_convert_surface
+  [69] camera_update         [203] gf3d_device_create_logic_device [143] gf3d_texture_copy_buffer_to_image
+  [43] entity_draw           [204] gf3d_device_get       [144] gf3d_texture_create_sampler
+ [122] entity_free           [179] gf3d_device_get_info  [103] gf3d_texture_delete
+ [123] entity_new            [205] gf3d_device_get_logical_device_info [184] gf3d_texture_delete_all
+  [70] entity_system_draw_all [206] gf3d_device_manager_determine_best [104] gf3d_texture_free
+ [187] entity_system_init    [207] gf3d_device_manager_init [145] gf3d_texture_get_by_filename
+   [3] entity_system_think_all [208] gf3d_devices_enumerate [185] gf3d_texture_init
+  [71] entity_system_update_all [180] gf3d_devices_get_best_device [146] gf3d_texture_load
+  [72] game_frame_delay      [163] gf3d_extensions_check_available [147] gf3d_texture_new
+  [27] get_file_Size         [181] gf3d_extensions_config [175] gf3d_uniform_buffer_list_free
+ [188] gf2d_actor_clear_all  [209] gf3d_extensions_device_init [34] gf3d_uniform_buffer_list_get_nth_buffer
+ [105] gf2d_actor_delete     [164] gf3d_extensions_enable [176] gf3d_uniform_buffer_list_new
+  [73] gf2d_actor_draw       [210] gf3d_extensions_get_device_enabled_names [119] gf3d_vgraphics_create_image_view
+ [189] gf2d_actor_init       [211] gf3d_extensions_get_instance_enabled_names [109] gf3d_vgraphics_find_memory_type
+  [74] gf2d_font_draw_line   [212] gf3d_extensions_instance_init [32] gf3d_vgraphics_get_current_buffer_frame
+  [75] gf2d_font_draw_line_tag [134] gf3d_mesh_create_vertex_buffer_from_vertices [63] gf3d_vgraphics_get_default_logical_device
+  [76] gf2d_font_get_by_tag   [45] gf3d_mesh_draw        [108] gf3d_vgraphics_get_default_physical_device
+  [77] gf2d_font_image_get   [128] gf3d_mesh_free         [35] gf3d_vgraphics_get_graphics_command_pool
+ [190] gf2d_font_image_new   [165] gf3d_mesh_get_attribute_descriptions [48] gf3d_vgraphics_get_projection_matrix
+ [191] gf2d_font_init        [182] gf3d_mesh_get_bind_description [49] gf3d_vgraphics_get_view
+ [120] gf2d_font_type_from_text [135] gf3d_mesh_get_by_filename [177] gf3d_vgraphics_get_view_extent
+  [78] gf2d_font_update      [213] gf3d_mesh_get_pipeline [62] gf3d_vgraphics_get_view_extent_as_vector2d
+ [192] gf2d_fonts_load_json  [214] gf3d_mesh_init        [227] gf3d_vgraphics_init
+  [79] gf2d_mouse_draw        [22] gf3d_mesh_load         [93] gf3d_vgraphics_render_begin
+  [80] gf2d_mouse_get_position_from_center [136] gf3d_mesh_new [94] gf3d_vgraphics_render_end
+  [81] gf2d_mouse_update     [137] gf3d_mesh_primitive_new [95] gf3d_vgraphics_render_start
+ [193] gf2d_sprite_create_vertex_buffer [46] gf3d_mesh_primitive_queue_render [148] gf3d_vgraphics_screen_convert
+ [106] gf2d_sprite_delete     [47] gf3d_mesh_queue_render [228] gf3d_vgraphics_semaphores_create
+  [82] gf2d_sprite_draw      [138] gf3d_mesh_setup_face_buffers [96] gf3d_vgraphics_set_view
+  [83] gf2d_sprite_draw_full   [4] gf3d_obj_edge_test    [229] gf3d_vgraphics_setup
+ [194] gf2d_sprite_free      [139] gf3d_obj_get_bounds   [230] gf3d_vqueues_choose_graphics_family
+ [195] gf2d_sprite_from_surface [140] gf3d_obj_get_counts_from_file [231] gf3d_vqueues_choose_present_family
+ [178] gf2d_sprite_get_attribute_descriptions [23] gf3d_obj_load_from_file [232] gf3d_vqueues_choose_transfer_family
+ [196] gf2d_sprite_get_bind_description [24] gf3d_obj_load_get_data_from_file [33] gf3d_vqueues_get_graphics_queue
+  [84] gf2d_sprite_get_uniform_buffer [141] gf3d_obj_load_reorg [186] gf3d_vqueues_get_graphics_queue_family
+ [197] gf2d_sprite_manager_init [166] gf3d_pipelin_depth_stencil_create_info_from_json [233] gf3d_vqueues_get_graphics_queue_info
+ [198] gf2d_sprite_new        [37] gf3d_pipeline_call_render [97] gf3d_vqueues_get_present_queue
+  [52] gf3_pipeline_update_ubos [167] gf3d_pipeline_create_basic_descriptor_pool [234] gf3d_vqueues_get_present_queue_family
+ [112] gf3d_buffer_copy      [168] gf3d_pipeline_create_basic_descriptor_pool_from_config [235] gf3d_vqueues_get_present_queue_info
+ [110] gf3d_buffer_create    [169] gf3d_pipeline_create_basic_descriptor_set_layout_from_config [236] gf3d_vqueues_get_queue_create_info
+  [44] gf3d_camera_get_position [170] gf3d_pipeline_create_descriptor_sets [237] gf3d_vqueues_get_transfer_queue_family
+  [85] gf3d_camera_look_at   [171] gf3d_pipeline_create_from_config [238] gf3d_vqueues_init
+  [86] gf3d_camera_set_position [38] gf3d_pipeline_draw_call_new [239] gf3d_vqueues_setup_device_queues
+  [87] gf3d_camera_set_rotation [129] gf3d_pipeline_find_depth_format [6] gfc_edge_in_plane
+  [88] gf3d_camera_update_view [130] gf3d_pipeline_find_supported_format [25] gfc_matrix2_v_multiply
+  [50] gf3d_command_begin_single_time [111] gf3d_pipeline_free [1] gfc_matrix4_multiply_v
+  [53] gf3d_command_configure_render_pass [39] gf3d_pipeline_get_descriptor_set [20] gfc_point_in_triangle
+  [54] gf3d_command_configure_render_pass_end [215] gf3d_pipeline_init [10] gfc_point_same_side
+  [51] gf3d_command_end_single_time [172] gf3d_pipeline_new [18] gfc_trigfc_angle_edge_test
+ [107] gf3d_command_free      [40] gf3d_pipeline_queue_render [11] gfc_trigfc_angle_get_normal
+ [199] gf3d_command_graphics_pool_setup [57] gf3d_pipeline_render_all_drawcalls [16] gfc_trigfc_angle_get_plane
+  [89] gf3d_command_pool_get_used_buffer_count [41] gf3d_pipeline_render_drawcall [26] gfc_vector2d
+  [90] gf3d_command_pool_get_used_buffers [173] gf3d_pipeline_render_pass_create [21] gfc_vector2dz
+ [200] gf3d_command_pool_new  [91] gf3d_pipeline_reset_all_pipes [5] gfc_vector3d
+  [55] gf3d_command_rendering_begin [58] gf3d_pipeline_reset_frame [17] gfc_vector3d_cross_product
+  [56] gf3d_command_rendering_end [92] gf3d_pipeline_submit_all_pipe_commands [9] gfc_vector3d_magnitude
+ [201] gf3d_command_system_init [59] gf3d_pipeline_submit_commands [7] gfc_vector3d_normalize
+ [150] gf3d_config_access_flag_bits [42] gf3d_pipeline_update_descriptor_set [19] gfc_vector3dw
+ [124] gf3d_config_access_flag_bits_from_str [60] gf3d_pipeline_update_descriptor_sets [8] gfc_vector4d
+ [125] gf3d_config_attachment_description [131] gf3d_shaders_create_module [15] gfc_vector4dxyz
+ [151] gf3d_config_color_component_flag_bits [132] gf3d_shaders_load_data [98] monster_draw
+ [152] gf3d_config_compar_op_flag_from_str [216] gf3d_swapchain_choose_format [12] monster_navigate_to_player
+ [113] gf3d_config_descriptor_type_from_str [217] gf3d_swapchain_configure_extent [13] monster_think
+ [114] gf3d_config_image_layer_from_str [218] gf3d_swapchain_create [99] monster_update
+ [115] gf3d_config_parse_blend_factor [219] gf3d_swapchain_create_depth_image [240] monsters_init
+ [153] gf3d_config_parse_blend_op [149] gf3d_swapchain_create_frame_buffer [241] parse_arguments
+ [116] gf3d_config_parse_color_component_flag_bits [220] gf3d_swapchain_create_image [100] player_draw
+ [154] gf3d_config_parse_cull_mode [221] gf3d_swapchain_create_image_view [14] player_think
+ [155] gf3d_config_parse_front_face [222] gf3d_swapchain_find_Memory_type [101] player_update
+ [156] gf3d_config_parse_polygon_mode [64] gf3d_swapchain_get [102] resetMouseToCenter
+ [118] gf3d_config_parse_sample_count_bits [183] gf3d_swapchain_get_chain_length [242] spawn_camera
+ [157] gf3d_config_pipeline_bindpoint_from_str [36] gf3d_swapchain_get_extent [30] spawn_monster
+ [158] gf3d_config_pipeline_color_blend_attachment [174] gf3d_swapchain_get_format [31] spawn_player
+ [126] gf3d_config_pipeline_stage_flags_from_str [61] gf3d_swapchain_get_frame_buffer_by_index [28] spawn_world
+ [159] gf3d_config_pipline_multisample_state_create_info [223] gf3d_swapchain_get_presentation_mode [65] world_draw
+ [160] gf3d_config_pipline_rasterization_state_create_info [133] gf3d_swapchain_get_swap_image_count [66] world_think
+ [161] gf3d_config_primitive_topology_from_str [224] gf3d_swapchain_has_stencil_component [67] world_update
+ [121] gf3d_config_shader_stage_flag_from_str [225] gf3d_swapchain_init
+ [127] gf3d_config_shader_stage_flags [226] gf3d_swapchain_setup_frame_buffers

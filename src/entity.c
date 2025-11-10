@@ -119,6 +119,7 @@ void entity_system_think_all()
         {
             if(entity_system.entity_list[i].think )
             {
+                //slog("Thinking about %s", entity_system.entity_list[i].name);
                 entity_system.entity_list[i].think(&entity_system.entity_list[i]);
             }
         }

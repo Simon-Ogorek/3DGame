@@ -1,23 +1,36 @@
 #include "entity.h"
+#include "player.h"
+#include "world.h"
+
+#define PATH_STALENESS_DIST 20
 
 typedef struct Path
 {
-    GFC_Vector3D* points;
+     GFC_List* points;
     int curr_idx;
-    int count;
 }Path;
 
+enum Monster_State
+{
+    UNAWARE, // DEFAULT | Idling
+    TRACKING, // Trying to path
+    ATTACKING, // Close enough to attack
+    RECOIL, // Finished attacking, waiting for end of attack
+};
 typedef struct Monster_Stats
 {
-    float health;
-    float attack_speed;
-    float last_attack_time;
-    float range;
-    float damage;
+    int health;
+    int attack_speed;
+    int attack_nums;
+    int range;
+    int damage;
+    int speed;
+    int aware_range;
+    int time_between_attacks;
+    int offsetZ;
+    int elemental;
+    char *behavior;
 
-    float last_path_resync_time;
-
-    float speed;
 }Monster_Stats;
 
 typedef struct Monster
@@ -25,12 +38,21 @@ typedef struct Monster
     Entity *ent;
     Path* curr_path;
     Monster_Stats* stats;
+
+    enum Monster_State state;
+    // This number represents the number of times the enemy has swung in a single attack state
+    int attacks; 
+    Uint32 attack_time;
+
+    Uint32 recoil_time;
+
 }Monster;
 
+void monsters_init(Player* p, World* w);
 
 Monster *spawn_monster();
 
-Path *monster_navigate_to_player(Monster* tracker);
+void monster_navigate_to_player(Monster* tracker);
 Path *monster_navigate_to_pos(Monster* tracker, GFC_Vector3D* target);
 void monster_kill(Monster* monst);
 
