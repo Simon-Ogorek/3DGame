@@ -163,11 +163,12 @@ void player_think(Entity *ent)
 
     if (gfc_input_key_pressed("1"))
     {
-        if (play->money - 50 >= 0 && play->health != play->max_health)
+        if (play->money - 50 >= 0)
         {
             play->money -= 50;
-            play->health = (play->health + 40 > play->max_health ? play->max_health : play->health + 40);
+            play->health = (play->health + 40) > play->max_health ? play->max_health : play->health + 40;
         }
+        slog("%i",play->max_health);
     }
 
     if (gfc_input_key_pressed("2"))
@@ -261,8 +262,9 @@ void player_award_kill(Player *play)
 void player_stats_scale(Player* play)
 {
     // each level is a 4% gain to stats
-    float scale_factor = (play->level + 1) / 25 + 1;
+    float scale_factor = ((float)play->level + 1) / 25.0f + 1;
     play->attack_speed = scale_factor * play->orginal_attack_speed;
     play->max_health = scale_factor * play->original_max_health;
     play->damage = scale_factor * play->original_damage;
+    //slog("new player health");
 }

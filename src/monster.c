@@ -416,6 +416,10 @@ void monster_think(Entity *ent)
             slog("Still recoiling, %f ms left, returning", (SDL_GetTicks() - monst->recoil_time));
             return;
         }
+        else
+        {
+            monst->state = UNAWARE;
+        }
     }
     // if monster is close enough, ignore all previous instructions and start swinging
     if (monst->state != ATTACKING)
