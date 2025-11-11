@@ -101,16 +101,35 @@ int main(int argc,char *argv[])
     
     P_Camera* p_cam = spawn_camera(player);
 
+    player_award_kill(player);
     monsters_init(player, world);
 
-    Monster* agumon_monster = spawn_monster("friend");
+    spawn_random_monster();
 
-    
-    
+    char player_health[10];
+
+    char player_level[10];
+
+    char player_money[10];
+
+    Sprite* heart_pic = gf2d_sprite_load_image("icons/heart.png");
+    Sprite* money_pic = gf2d_sprite_load_image("icons/money.png");
+    Sprite* xp_pic = gf2d_sprite_load_image("icons/xp.png");
+    Sprite* crosshair_pic = gf2d_sprite_load_image("icons/crosshair.png");
+    Sprite* shop_pic = gf2d_sprite_load_image("icons/shop.png");
+    Uint8 shop_active = 0;
+    Uint32 next_enemy_spawn_time = SDL_GetTicks() + (rand()%5000) + 10;
     //gf3d_camera_look_at(gfc_vector3d(0,0,0),&cam);
     while(!_done)
     {
-
+        if (next_enemy_spawn_time < SDL_GetTicks())
+        {
+            next_enemy_spawn_time = SDL_GetTicks() + (rand()%5000) + 10;
+            spawn_random_monster();
+        }
+        sprintf(player_health, "%i", player->health);
+        sprintf(player_level, "%i", player->level);
+        sprintf(player_money, "%i", player->money);
         gfc_input_update();
         gf2d_mouse_update();
         gf2d_font_update();
@@ -129,7 +148,26 @@ int main(int argc,char *argv[])
         //gf3d_mesh_draw(mesh,dinoM,GFC_COLOR_WHITE,texture, lightPos, lightColor);
         entity_system_draw_all();
         //2D draws
-        gf2d_font_draw_line_tag("ALT+F4 to exit",FT_H1,GFC_COLOR_WHITE, gfc_vector2d(10,10));
+
+        gf2d_sprite_draw_image(crosshair_pic, gfc_vector2d(1920/2 - 32, 1200/2 - 32));
+
+        gf2d_sprite_draw_image(heart_pic, gfc_vector2d(10,10));
+        gf2d_font_draw_line_tag(player_health,FT_H1,GFC_COLOR_WHITE, gfc_vector2d(80,30));
+
+        gf2d_sprite_draw_image(money_pic, gfc_vector2d(1700,10));
+        gf2d_font_draw_line_tag(player_money,FT_H1,GFC_COLOR_WHITE, gfc_vector2d(1770,30));
+        
+        gf2d_sprite_draw_image(xp_pic, gfc_vector2d(150,10));
+        gf2d_font_draw_line_tag(player_level,FT_H1,GFC_COLOR_WHITE, gfc_vector2d(220,30));
+
+        if (shop_active)
+        {
+            gf2d_sprite_draw_image(shop_pic, gfc_vector2d(560,300));
+        }
+        if (gfc_input_key_pressed("p"))
+        {
+            shop_active ^= 1;
+        }
         gf2d_mouse_draw();
         gf3d_vgraphics_render_end();
         if (gfc_input_command_down("exit"))_done = 1; // exit condition

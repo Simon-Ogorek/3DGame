@@ -4,11 +4,11 @@
 #include "gfc_input.h"
 #include "gf3d_camera.h"
 #include "gf2d_mouse.h"
-
+#include "monster.h"
 Player *tracked_player;
 P_Camera *cam;
 
-GFC_Vector3D camera_offset = {0,10,150};
+GFC_Vector3D camera_offset = {0,10,50};
 P_Camera *spawn_camera(Player *player)
 {
     cam = (P_Camera *)malloc(sizeof(P_Camera));
@@ -113,6 +113,7 @@ void camera_update(Entity *ent)
 {
     //slog("camera update");
     GFC_Vector3D playerPos = tracked_player->ent->position;
+    playerPos.z += 20;
     GFC_Vector3D newPos = gfc_vector3d_added(playerPos,camera_offset);
     
     //slog("Player at %f,%f,%f Tracking %f,%f,%f", playerPos.x, playerPos.y, playerPos.z, newPos.x, newPos.y, newPos.z);
@@ -128,4 +129,28 @@ void free_camera(P_Camera *camera)
         free(camera);
 
     slog("Freeing a camera");
+}
+
+void shoot_relative_to_camera()
+{
+    slog("shooting");
+        //slog("camera update");
+    GFC_Vector3D playerPos = tracked_player->ent->position;
+    playerPos.z += 20;
+    GFC_Vector3D newPos = gfc_vector3d_added(playerPos,camera_offset);
+    
+    //slog("Player at %f,%f,%f Tracking %f,%f,%f", playerPos.x, playerPos.y, playerPos.z, newPos.x, newPos.y, newPos.z);
+    
+    GFC_Vector3D lookDir = gfc_vector3d_subbed(playerPos, newPos);
+
+    gfc_vector3d_normalize(&lookDir);
+    slog("look dir %f,%f,%f", gfc_vector3d_to_slog(lookDir));
+    GFC_Vector3D endPoint;
+    gfc_vector3d_scale(endPoint,lookDir, 10000);
+    endPoint = gfc_vector3d_added(endPoint, newPos);
+    slog("shooting a ray from \n%f,%f,%f to %f,%f,%f", gfc_vector3d_to_slog(newPos), gfc_vector3d_to_slog(endPoint));
+    slog("player pos %f,%f,%f", gfc_vector3d_to_slog(tracked_player->ent->position));
+    GFC_Edge3D gunRay = gfc_edge3d_from_vectors(newPos, endPoint);
+    check_player_shot_ray(gunRay, tracked_player->damage);
+
 }

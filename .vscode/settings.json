@@ -18,7 +18,8 @@
         "gf2d_mouse.h": "c",
         "gfc_vector.h": "c",
         "monster.h": "c",
-        "gfc_config.h": "c"
+        "gfc_config.h": "c",
+        "gf3d_camera.h": "c"
     },
     "C_Cpp.intelliSenseEngine": "default",
     "editor.wordBasedSuggestions": "allDocuments",

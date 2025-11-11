@@ -60,5 +60,7 @@ void monster_think(Entity *ent);
 
 void monster_update(Entity *ent);
 void monster_draw(Entity *ent);
-
+void check_player_shot_ray(GFC_Edge3D ray, int damage);
+void spawn_random_monster();
+void check_player_kill_zone(int damage);
 

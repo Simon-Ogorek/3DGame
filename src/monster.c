@@ -10,6 +10,7 @@ static World* the_world;
 static Player* target_player;
 static GFC_List* nav_nodes;
 //static GFC_List* 
+static GFC_List* active_monsters;
 typedef struct NavNode
 {
     GFC_Triangle3D tri;
@@ -53,6 +54,7 @@ void monsters_init(Player* player, World* world)
     the_world = world;
 
     nav_nodes = gfc_list_new();
+    active_monsters = gfc_list_new();
 
     MeshPrimitive* prim = (MeshPrimitive *)the_world->walkable->mesh->primitives->elements[0].data;
     ObjData* obj = prim->objData;
@@ -170,10 +172,26 @@ NavNode* gfc_find_closest_node(GFC_Vector3D point)
     return closest_node;
 }
 
+void spawn_random_monster()
+{
+    char names[5][20] =
+    {
+        "friend",
+        "bar_knee",
+        "sick_ass_spider",
+        "goober",
+        "count_fresh"
+    };
+
+    char *name = names[rand() % 5];
+
+    spawn_monster(name);
+
+}
 Monster *spawn_monster(char *name)
 {
     Monster* monst = (Monster *)malloc(sizeof(Monster));
-
+    gfc_list_append(active_monsters, monst);
     monst->ent = entity_new(); 
 
     monst->ent->think = &monster_think;
@@ -223,7 +241,6 @@ Monster *spawn_monster(char *name)
     sj_get_integer_value(sj_object_get_value(monst_def,"elemental"),&monst->stats->elemental);
     monst->stats->behavior = sj_get_string_value(sj_object_get_value(monst_def,"behavior"));
     slog("awareness : %i | range : %i",monst->stats->aware_range, monst->stats->range);
-
     
     monst->ent->mesh = gf3d_mesh_load(monst_model);
     monst->ent->texture = gf3d_texture_load(monst_texture);
@@ -256,9 +273,9 @@ Monster *spawn_monster(char *name)
     return monst;
 }
 
-void attack_player()
+void attack_player(Monster* monst)
 {
-    slog("idfk,attack the player");
+    player_damage(tracked_player, monst->stats->damage);
 }
 
 Path *monster_navigate_to_pos(Monster* tracker, GFC_Vector3D* target)
@@ -408,6 +425,7 @@ void monster_think(Entity *ent)
             slog("Player is close enough, switching to attack");
             monst->state = ATTACKING;
             monst->attacks = 0;
+            monst->attack_time = 0;
         }
     }
 
@@ -417,7 +435,8 @@ void monster_think(Entity *ent)
         {
             if ((SDL_GetTicks() - monst->attack_time) > monst->stats->attack_speed)
             {
-                attack_player(monst); // declare this
+                slog("damaging player");
+                attack_player(monst);
                 monst->attack_time = SDL_GetTicks();
                 monst->attacks++;
             }
@@ -542,6 +561,66 @@ void monster_draw(Entity *ent)
     entity_draw(ent);
 }
 
+void check_player_shot_ray(GFC_Edge3D ray, int damage)
+{
+    //slog("checking %i monsters", gfc_list_count(active_monsters));
+    for (int i = 0; i < gfc_list_count(active_monsters); i++)
+    {
+        Monster* monst = (Monster*)gfc_list_get_nth(active_monsters, i);
+        MeshPrimitive* monst_prim = (MeshPrimitive *)monst->ent->mesh->primitives->elements[0].data;
+        slog("monster is at %f,%f,%f", gfc_vector3d_to_slog(monst->ent->position));
+        
+        
+        if (gf3d_obj_edge_test(monst_prim->objData, monst->ent->matrix, ray, NULL))
+        {
+            slog("damaged monster from ray");
+            monster_damage(monst, damage);
+            return;
+        }
+        
+        if (gfc_edge_box_test(ray, monst_prim->objData->bounds, NULL, NULL))
+        {
+            slog("box test passed");
+        }
+    }
+}
+
+void check_player_kill_zone(int damage)
+{
+    //slog("checking %i monsters", gfc_list_count(active_monsters));
+    for (int i = 0; i < gfc_list_count(active_monsters); i++)
+    {
+        Monster* monst = (Monster*)gfc_list_get_nth(active_monsters, i);
+        
+        slog ("monst is %f units away", gfc_vector3d_magnitude_between(monst->ent->position, tracked_player->ent->position));
+        if (gfc_vector3d_magnitude_between(monst->ent->position, tracked_player->ent->position) < 500)
+        {
+            monster_damage(monst, damage);
+        }
+    }
+}
+
+void monster_damage(Monster *monst, int damage)
+{
+    slog("damage : %i", damage);
+    monst->stats->health = ((monst->stats->health - damage) > 0) ? monst->stats->health - damage : 0;
+    slog("OWWW!! that hurt, health: %i", monst->stats->health);
+    if (!monst->stats->health)
+    {
+        monster_kill(monst); 
+    }
+}
+
+void monster_kill(Monster* monst)
+{
+    slog("killed a monster");
+    player_award_kill(tracked_player);
+
+    entity_free(monst->ent);
+    
+    gfc_list_delete_data(active_monsters, monst);
+    free(monst);
+}
 /*void monster_navigate_to_player(Monster* tracker)
 {
     GFC_List* open = gfc_list_new();
